@@ -77,6 +77,7 @@
                     <connections>
                         <outlet property="idTextField" destination="BNu-cS-VIw" id="2ts-2c-nXk"/>
                         <outlet property="nameTextField" destination="BNu-cS-VIw" id="h0D-ea-t5C"/>
+                        <outlet property="nextBtn" destination="MSK-Cn-YPH" id="DDm-m8-C1O"/>
                         <outlet property="pwTextField" destination="gyc-sf-NDJ" id="GAm-cl-RD7"/>
                     </connections>
                 </viewController>
