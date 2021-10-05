@@ -65,6 +65,9 @@
                                 <rect key="frame" x="364" y="660" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="touchUpToGoComplete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nQN-Yw-m1e"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
