@@ -8,12 +8,14 @@
 import UIKit
 
 class SignInViewController: UIViewController {
-
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var pwTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
+    
     @IBAction func touchUpToGoSignUp(_ sender: Any) {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") else { return }
         
@@ -21,8 +23,9 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func touchUpToGoComplete(_ sender: Any) {
-        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") else { return }
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") as? CompleteViewController else { return }
         
+        nextVC.name = self.nameTextField.text
         nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: false, completion: nil)
     }

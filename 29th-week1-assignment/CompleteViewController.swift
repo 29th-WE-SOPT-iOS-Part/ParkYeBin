@@ -8,11 +8,14 @@
 import UIKit
 
 class CompleteViewController: UIViewController {
-
+    
+    @IBOutlet weak var welcomeLabel: UILabel!
+    var name: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.welcomeLabel.text = self.name! + "님 환영합니다!"
     }
     
 
