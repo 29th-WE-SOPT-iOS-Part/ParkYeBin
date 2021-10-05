@@ -135,7 +135,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="idTextField" destination="l1o-5b-Fea" id="dRb-65-gWa"/>
                         <outlet property="nameTextField" destination="659-7X-Esi" id="wJU-ZO-YFT"/>
+                        <outlet property="nextBtn" destination="jzw-gE-sBR" id="1Ml-Ku-DWI"/>
+                        <outlet property="pwTextField" destination="NRq-yi-NoX" id="WTz-Yg-2bo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgw-ky-WFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
