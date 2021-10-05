@@ -120,6 +120,9 @@
                                 <rect key="frame" x="210" y="671" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="touchUpToGoComplete:" destination="CbX-cp-46z" eventType="touchUpInside" id="i6d-IM-mOB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q3F-Qk-B3y"/>
