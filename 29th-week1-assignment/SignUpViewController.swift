@@ -24,6 +24,25 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         self.pwTextField.delegate = self
         
         self.pwCheckBox.titleLabel!.text = ""
+        
+        self.nameTextField.layer.borderWidth = 1
+        self.nameTextField.layer.borderColor = UIColor.lightGray.cgColor
+        self.nameTextField.layer.cornerRadius = 10
+        self.nameTextField.addLeftPadding()
+        
+        self.idTextField.layer.borderWidth = 1
+        self.idTextField.layer.borderColor = UIColor.lightGray.cgColor
+        self.idTextField.layer.cornerRadius = 10
+        self.idTextField.addLeftPadding()
+        
+        self.pwTextField.layer.borderWidth = 1
+        self.pwTextField.layer.borderColor = UIColor.lightGray.cgColor
+        self.pwTextField.layer.cornerRadius = 10
+        self.pwTextField.addLeftPadding()
+        
+        self.nextBtn.backgroundColor = UIColor.systemBlue
+        self.nextBtn.layer.cornerRadius = 10
+        self.nextBtn.backgroundColor = UIColor.lightGray
     }
     
     @IBAction func touchUpCheckBox(_ sender: Any) {

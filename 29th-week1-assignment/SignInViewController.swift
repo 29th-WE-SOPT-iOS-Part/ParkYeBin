@@ -38,6 +38,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
         self.nextBtn.backgroundColor = UIColor.systemBlue
         self.nextBtn.layer.cornerRadius = 10
+        self.nextBtn.backgroundColor = UIColor.lightGray
         
     }
     
@@ -59,6 +60,10 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.nextBtn.isEnabled =
         self.nameTextField.hasText && self.idTextField.hasText && self.pwTextField.hasText
+        
+        if self.nextBtn.isEnabled {
+            self.nextBtn.backgroundColor = UIColor.systemBlue
+        }
     }
 }
 
