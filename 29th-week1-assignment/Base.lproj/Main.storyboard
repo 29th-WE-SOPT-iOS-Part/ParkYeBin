@@ -51,7 +51,7 @@
                                 <rect key="frame" x="40" y="555" width="354" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lh-cJ-MSG">
                                 <rect key="frame" x="40" y="660" width="65" height="30"/>
@@ -69,6 +69,22 @@
                                     <action selector="touchUpToGoComplete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nQN-Yw-m1e"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호 표시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgO-05-mI0">
+                                <rect key="frame" x="74" y="618" width="93" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5N-KW-PMB">
+                                <rect key="frame" x="40" y="613" width="44" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system"/>
+                                <connections>
+                                    <action selector="touchUpCheckBox:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zh5-6j-m5g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -78,6 +94,7 @@
                         <outlet property="idTextField" destination="BNu-cS-VIw" id="2ts-2c-nXk"/>
                         <outlet property="nameTextField" destination="BNu-cS-VIw" id="h0D-ea-t5C"/>
                         <outlet property="nextBtn" destination="MSK-Cn-YPH" id="DDm-m8-C1O"/>
+                        <outlet property="pwCheckBox" destination="B5N-KW-PMB" id="pfn-J8-3p7"/>
                         <outlet property="pwTextField" destination="gyc-sf-NDJ" id="GAm-cl-RD7"/>
                     </connections>
                 </viewController>
@@ -120,7 +137,7 @@
                                 <rect key="frame" x="30" y="565" width="354" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzw-gE-sBR">
                                 <rect key="frame" x="210" y="671" width="30" height="30"/>
@@ -202,6 +219,7 @@
     </scenes>
     <resources>
         <image name="googleLogo" width="184" height="62"/>
+        <image name="square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
