@@ -7,11 +7,14 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController, UITextFieldDelegate{
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var pwCheckBox: UIButton!
+    
+    var isChecked: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +22,22 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
         self.nameTextField.delegate = self
         self.idTextField.delegate = self
         self.pwTextField.delegate = self
+        
+        self.pwCheckBox.titleLabel!.text = ""
     }
+    
+    @IBAction func touchUpCheckBox(_ sender: Any) {
+        if self.isChecked == false {
+            self.isChecked = true
+            self.pwCheckBox.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+            self.pwTextField.isSecureTextEntry = false
+        } else {
+            self.isChecked = false
+            self.pwCheckBox.setImage(UIImage(systemName: "square"), for: .normal)
+            self.pwTextField.isSecureTextEntry = true
+        }
+    }
+    
     @IBAction func touchUpToGoComplete(_ sender: Any) {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") as? CompleteViewController else { return }
         
