@@ -43,6 +43,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         self.nextBtn.backgroundColor = UIColor.systemBlue
         self.nextBtn.layer.cornerRadius = 10
         self.nextBtn.backgroundColor = UIColor.lightGray
+        
+        self.nameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        self.idTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        self.pwTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
     }
     
     @IBAction func touchUpCheckBox(_ sender: Any) {
@@ -65,9 +69,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         self.present(nextVC, animated: false, completion: nil)
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    @objc func textFieldDidChange(_ textField: UITextField) {
         self.nextBtn.isEnabled =
         self.nameTextField.hasText && self.idTextField.hasText && self.pwTextField.hasText
+        
+        if self.nextBtn.isEnabled {
+            self.nextBtn.backgroundColor = UIColor.systemBlue
+        }
     }
     
 }

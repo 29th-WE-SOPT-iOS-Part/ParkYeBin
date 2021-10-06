@@ -135,6 +135,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 표시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fx0-Ax-7B5">
+                                <rect key="frame" x="80" y="542.5" width="82" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="to6-bq-cZ3">
+                                <rect key="frame" x="43" y="536" width="44" height="31"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system"/>
+                                <connections>
+                                    <action selector="touchUpCheckBox:" destination="CbX-cp-46z" eventType="touchUpInside" id="CAe-Ww-s38"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="aQZ-Ln-liR">
                                 <rect key="frame" x="121" y="88" width="172" height="76"/>
                                 <constraints>
@@ -150,20 +164,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 표시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fx0-Ax-7B5">
-                                <rect key="frame" x="65" y="556.5" width="82" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="to6-bq-cZ3">
-                                <rect key="frame" x="28" y="550" width="44" height="31"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system"/>
-                                <connections>
-                                    <action selector="touchUpCheckBox:" destination="CbX-cp-46z" eventType="touchUpInside" id="CAe-Ww-s38"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일 또는 휴대전화" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otm-K0-ed7">
                                 <rect key="frame" x="43" y="390" width="328" height="57"/>
                                 <constraints>
@@ -192,7 +192,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzw-gE-sBR">
-                                <rect key="frame" x="43" y="620" width="328" height="50"/>
+                                <rect key="frame" x="43" y="593" width="328" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="SNa-zA-rnq"/>
                                 </constraints>
@@ -211,7 +211,7 @@
                             <constraint firstItem="bfw-ve-Q1Z" firstAttribute="top" secondItem="otm-K0-ed7" secondAttribute="bottom" constant="24" id="23s-J8-aWS"/>
                             <constraint firstItem="aQZ-Ln-liR" firstAttribute="leading" secondItem="Q3F-Qk-B3y" secondAttribute="leading" constant="121" id="3Ba-gD-pxC"/>
                             <constraint firstItem="Fx0-Ax-7B5" firstAttribute="centerY" secondItem="to6-bq-cZ3" secondAttribute="centerY" id="4P4-fP-oO6"/>
-                            <constraint firstItem="jzw-gE-sBR" firstAttribute="top" secondItem="to6-bq-cZ3" secondAttribute="bottom" constant="39" id="IhG-P2-eDv"/>
+                            <constraint firstItem="jzw-gE-sBR" firstAttribute="top" secondItem="to6-bq-cZ3" secondAttribute="bottom" constant="26" id="IhG-P2-eDv"/>
                             <constraint firstItem="Q3F-Qk-B3y" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fx0-Ax-7B5" secondAttribute="trailing" symbolic="YES" id="KjT-4j-yad"/>
                             <constraint firstItem="bfw-ve-Q1Z" firstAttribute="centerX" secondItem="Q3F-Qk-B3y" secondAttribute="centerX" id="Llf-ST-a6A"/>
                             <constraint firstItem="otm-K0-ed7" firstAttribute="leading" secondItem="Q3F-Qk-B3y" secondAttribute="leading" constant="43" id="Suf-8s-3cH"/>
@@ -222,9 +222,9 @@
                             <constraint firstItem="LLV-sP-NfR" firstAttribute="centerX" secondItem="Q3F-Qk-B3y" secondAttribute="centerX" id="leo-Ti-4iv"/>
                             <constraint firstItem="UEa-bR-70M" firstAttribute="leading" secondItem="Q3F-Qk-B3y" secondAttribute="leading" constant="43" id="mKU-UX-PMC"/>
                             <constraint firstItem="UEa-bR-70M" firstAttribute="top" secondItem="LLV-sP-NfR" secondAttribute="bottom" constant="108" id="ndp-ye-JZ1"/>
-                            <constraint firstItem="to6-bq-cZ3" firstAttribute="top" secondItem="bfw-ve-Q1Z" secondAttribute="bottom" constant="22" id="nyH-xo-7iu"/>
+                            <constraint firstItem="to6-bq-cZ3" firstAttribute="top" secondItem="bfw-ve-Q1Z" secondAttribute="bottom" constant="8" id="nyH-xo-7iu"/>
                             <constraint firstItem="otm-K0-ed7" firstAttribute="top" secondItem="UEa-bR-70M" secondAttribute="bottom" constant="24" id="rYB-sh-wrC"/>
-                            <constraint firstItem="to6-bq-cZ3" firstAttribute="leading" secondItem="Q3F-Qk-B3y" secondAttribute="leading" constant="28" id="sBU-mu-8Xb"/>
+                            <constraint firstItem="to6-bq-cZ3" firstAttribute="leading" secondItem="Q3F-Qk-B3y" secondAttribute="leading" constant="43" id="sBU-mu-8Xb"/>
                             <constraint firstItem="aQZ-Ln-liR" firstAttribute="top" secondItem="Q3F-Qk-B3y" secondAttribute="top" id="sUd-15-Tru"/>
                             <constraint firstItem="Fx0-Ax-7B5" firstAttribute="leading" secondItem="to6-bq-cZ3" secondAttribute="trailing" constant="-7" id="tYU-I2-DHx"/>
                             <constraint firstItem="UEa-bR-70M" firstAttribute="centerX" secondItem="Q3F-Qk-B3y" secondAttribute="centerX" id="z9F-93-WwR"/>
@@ -253,33 +253,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="googleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="FVQ-ku-9tl">
-                                <rect key="frame" x="144" y="287" width="126" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GT-6w-i1L">
-                                <rect key="frame" x="199" y="535" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="다음"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ㅇㅇㅇ님 환영합니다!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU1-Wh-hnx">
-                                <rect key="frame" x="147" y="380" width="134" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ㅇㅇㅇ님 환영합니다!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU1-Wh-hnx">
+                                <rect key="frame" x="140" y="270" width="134" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="RZw-KY-JlG"/>
+                                    <constraint firstAttribute="width" constant="134" id="mMc-Vg-6X2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="FVQ-ku-9tl">
+                                <rect key="frame" x="128" y="176" width="172" height="62"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyd-Wt-n3K">
+                                <rect key="frame" x="43" y="444" width="329" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="usp-3b-ReB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="다음">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpToGoComplete:" destination="CbX-cp-46z" eventType="touchUpInside" id="aoz-nh-d80"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fwq-Sa-0V3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fyd-Wt-n3K" firstAttribute="centerX" secondItem="Fwq-Sa-0V3" secondAttribute="centerX" constant="0.5" id="1kX-64-KE9"/>
+                            <constraint firstItem="sU1-Wh-hnx" firstAttribute="centerX" secondItem="Fwq-Sa-0V3" secondAttribute="centerX" id="9Cg-vx-n2x"/>
+                            <constraint firstItem="FVQ-ku-9tl" firstAttribute="leading" secondItem="Fwq-Sa-0V3" secondAttribute="leading" constant="128" id="Dkd-5M-XO5"/>
+                            <constraint firstItem="sU1-Wh-hnx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Fwq-Sa-0V3" secondAttribute="leading" id="H3w-Xh-dWk"/>
+                            <constraint firstItem="sU1-Wh-hnx" firstAttribute="top" secondItem="FVQ-ku-9tl" secondAttribute="bottom" constant="32" id="YEg-48-Xbf"/>
+                            <constraint firstItem="fyd-Wt-n3K" firstAttribute="top" secondItem="sU1-Wh-hnx" secondAttribute="bottom" constant="54" id="ZnI-Ww-6rE"/>
+                            <constraint firstItem="FVQ-ku-9tl" firstAttribute="centerX" secondItem="Fwq-Sa-0V3" secondAttribute="centerX" constant="7" id="mmX-FC-mwK"/>
+                            <constraint firstItem="FVQ-ku-9tl" firstAttribute="top" secondItem="Fwq-Sa-0V3" secondAttribute="top" constant="132" id="vVR-iV-Gl0"/>
+                            <constraint firstItem="fyd-Wt-n3K" firstAttribute="leading" secondItem="Fwq-Sa-0V3" secondAttribute="leading" constant="43" id="yPy-u0-99B"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="nextBtn" destination="fyd-Wt-n3K" id="AKQ-pl-Gbs"/>
                         <outlet property="welcomeLabel" destination="sU1-Wh-hnx" id="533-vr-k0G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bE7-IY-xNZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2483" y="92"/>
+            <point key="canvasLocation" x="2482.608695652174" y="91.741071428571431"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uLL-gn-nOo">
