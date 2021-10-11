@@ -22,6 +22,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUI()
+        
         for i in textFieldCollection {
             i.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         }
