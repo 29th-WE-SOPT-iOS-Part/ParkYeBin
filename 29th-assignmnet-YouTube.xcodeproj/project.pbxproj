@@ -44,11 +44,35 @@
 		1589114D271419C600CB7727 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				15BAB895270C428E00795C7F /* SignUpViewController.swift */,
-				15BAB897270C429F00795C7F /* CompleteViewController.swift */,
-				15BAB893270C427C00795C7F /* SignInViewController.swift */,
+				1589115027141D3100CB7727 /* SignInViewController */,
+				1589114F27141D2600CB7727 /* CompleteViewController */,
+				1589114E27141D1900CB7727 /* SignUpViewController */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		1589114E27141D1900CB7727 /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				15BAB895270C428E00795C7F /* SignUpViewController.swift */,
+			);
+			path = SignUpViewController;
+			sourceTree = "<group>";
+		};
+		1589114F27141D2600CB7727 /* CompleteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				15BAB897270C429F00795C7F /* CompleteViewController.swift */,
+			);
+			path = CompleteViewController;
+			sourceTree = "<group>";
+		};
+		1589115027141D3100CB7727 /* SignInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				15BAB893270C427C00795C7F /* SignInViewController.swift */,
+			);
+			path = SignInViewController;
 			sourceTree = "<group>";
 		};
 		15B70F79270B0B9F00767D1C = {
