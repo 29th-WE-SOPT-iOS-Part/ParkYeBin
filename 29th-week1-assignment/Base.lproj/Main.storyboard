@@ -117,10 +117,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yu5-fi-uwC"/>
                     <connections>
-                        <outlet property="idTextField" destination="BNu-cS-VIw" id="2ts-2c-nXk"/>
-                        <outlet property="nameTextField" destination="aQj-bi-ZHP" id="wPz-zH-McM"/>
+                        <outlet property="idTextField" destination="BNu-cS-VIw" id="rhd-Ms-6gv"/>
+                        <outlet property="nameTextField" destination="aQj-bi-ZHP" id="iY9-8r-dbq"/>
                         <outlet property="nextBtn" destination="MSK-Cn-YPH" id="DDm-m8-C1O"/>
-                        <outlet property="pwTextField" destination="gyc-sf-NDJ" id="GAm-cl-RD7"/>
+                        <outlet property="pwTextField" destination="gyc-sf-NDJ" id="6zQ-eR-wz2"/>
+                        <outletCollection property="textFieldCollection" destination="aQj-bi-ZHP" collectionClass="NSMutableArray" id="Wie-R0-1vk"/>
+                        <outletCollection property="textFieldCollection" destination="BNu-cS-VIw" collectionClass="NSMutableArray" id="y5I-NK-2Yo"/>
+                        <outletCollection property="textFieldCollection" destination="gyc-sf-NDJ" collectionClass="NSMutableArray" id="ftR-uD-x7K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

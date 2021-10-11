@@ -13,37 +13,35 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var nextBtn: UIButton!
     
+    @IBOutlet var textFieldCollection: [UITextField]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUI()
+
+        for i in textFieldCollection {
+            i.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        }
+    }
+    
+    func setUI() {
         self.nextBtn.isEnabled = false
-        self.nameTextField.delegate = self
-        self.idTextField.delegate = self
-        self.pwTextField.delegate = self
-        
-        self.nameTextField.layer.borderWidth = 1
-        self.nameTextField.layer.borderColor = UIColor.lightGray.cgColor
-        self.nameTextField.layer.cornerRadius = 10
-        self.nameTextField.addLeftPadding()
-        
-        self.idTextField.layer.borderWidth = 1
-        self.idTextField.layer.borderColor = UIColor.lightGray.cgColor
-        self.idTextField.layer.cornerRadius = 10
-        self.idTextField.addLeftPadding()
-        
-        self.pwTextField.layer.borderWidth = 1
-        self.pwTextField.layer.borderColor = UIColor.lightGray.cgColor
-        self.pwTextField.layer.cornerRadius = 10
-        self.pwTextField.addLeftPadding()
-        
         self.nextBtn.backgroundColor = UIColor.systemBlue
         self.nextBtn.layer.cornerRadius = 10
         self.nextBtn.backgroundColor = UIColor.lightGray
         
-        self.nameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
-        self.idTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
-        self.pwTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
-        
+        setTextFieldUI()
+    }
+    
+    func setTextFieldUI() {
+        for i in textFieldCollection {
+            i.delegate = self
+            i.layer.borderWidth = 1
+            i.layer.borderColor = UIColor.lightGray.cgColor
+            i.layer.cornerRadius = 10
+            i.addLeftPadding()
+        }
     }
     
     @IBAction func touchUpToGoSignUp(_ sender: Any) {
