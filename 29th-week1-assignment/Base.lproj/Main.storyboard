@@ -242,6 +242,14 @@
                         <outlet property="nextBtn" destination="jzw-gE-sBR" id="1Ml-Ku-DWI"/>
                         <outlet property="pwCheckBox" destination="to6-bq-cZ3" id="Wty-Xd-yf3"/>
                         <outlet property="pwTextField" destination="bfw-ve-Q1Z" id="7ux-cB-q9A"/>
+                        <outletCollection property="textFieldCollection" destination="UEa-bR-70M" collectionClass="NSMutableArray" id="9QP-4c-uaf"/>
+                        <outletCollection property="textFieldCollection" destination="UEa-bR-70M" collectionClass="NSMutableArray" id="I2a-2r-mhK"/>
+                        <outletCollection property="textFieldCollection" destination="UEa-bR-70M" collectionClass="NSMutableArray" id="SOr-QY-SHX"/>
+                        <outletCollection property="textFieldCollection" destination="UEa-bR-70M" collectionClass="NSMutableArray" id="CT6-oc-EJx"/>
+                        <outletCollection property="textFieldCollection" destination="UEa-bR-70M" collectionClass="NSMutableArray" id="GgN-GI-ZwL"/>
+                        <outletCollection property="textFieldCollection" destination="UEa-bR-70M" collectionClass="NSMutableArray" id="SpO-ml-kXB"/>
+                        <outletCollection property="textFieldCollection" destination="otm-K0-ed7" collectionClass="NSMutableArray" id="p5X-Nx-826"/>
+                        <outletCollection property="textFieldCollection" destination="bfw-ve-Q1Z" collectionClass="NSMutableArray" id="W1z-Lu-1js"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgw-ky-WFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -12,7 +12,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var nextBtn: UIButton!
-    
     @IBOutlet var textFieldCollection: [UITextField]!
     
     override func viewDidLoad() {
