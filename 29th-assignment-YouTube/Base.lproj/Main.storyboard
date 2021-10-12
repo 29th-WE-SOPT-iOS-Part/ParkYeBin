@@ -117,10 +117,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yu5-fi-uwC"/>
                     <connections>
-                        <outlet property="idTextField" destination="BNu-cS-VIw" id="2ts-2c-nXk"/>
-                        <outlet property="nameTextField" destination="aQj-bi-ZHP" id="wPz-zH-McM"/>
+                        <outlet property="idTextField" destination="BNu-cS-VIw" id="rhd-Ms-6gv"/>
+                        <outlet property="nameTextField" destination="aQj-bi-ZHP" id="iY9-8r-dbq"/>
                         <outlet property="nextBtn" destination="MSK-Cn-YPH" id="DDm-m8-C1O"/>
-                        <outlet property="pwTextField" destination="gyc-sf-NDJ" id="GAm-cl-RD7"/>
+                        <outlet property="pwTextField" destination="gyc-sf-NDJ" id="6zQ-eR-wz2"/>
+                        <outletCollection property="textFieldCollection" destination="aQj-bi-ZHP" collectionClass="NSMutableArray" id="Wie-R0-1vk"/>
+                        <outletCollection property="textFieldCollection" destination="BNu-cS-VIw" collectionClass="NSMutableArray" id="y5I-NK-2Yo"/>
+                        <outletCollection property="textFieldCollection" destination="gyc-sf-NDJ" collectionClass="NSMutableArray" id="ftR-uD-x7K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -239,6 +242,14 @@
                         <outlet property="nextBtn" destination="jzw-gE-sBR" id="1Ml-Ku-DWI"/>
                         <outlet property="pwCheckBox" destination="to6-bq-cZ3" id="Wty-Xd-yf3"/>
                         <outlet property="pwTextField" destination="bfw-ve-Q1Z" id="7ux-cB-q9A"/>
+                        <outletCollection property="textFieldCollection" destination="UEa-bR-70M" collectionClass="NSMutableArray" id="9QP-4c-uaf"/>
+                        <outletCollection property="textFieldCollection" destination="UEa-bR-70M" collectionClass="NSMutableArray" id="I2a-2r-mhK"/>
+                        <outletCollection property="textFieldCollection" destination="UEa-bR-70M" collectionClass="NSMutableArray" id="SOr-QY-SHX"/>
+                        <outletCollection property="textFieldCollection" destination="UEa-bR-70M" collectionClass="NSMutableArray" id="CT6-oc-EJx"/>
+                        <outletCollection property="textFieldCollection" destination="UEa-bR-70M" collectionClass="NSMutableArray" id="GgN-GI-ZwL"/>
+                        <outletCollection property="textFieldCollection" destination="UEa-bR-70M" collectionClass="NSMutableArray" id="SpO-ml-kXB"/>
+                        <outletCollection property="textFieldCollection" destination="otm-K0-ed7" collectionClass="NSMutableArray" id="p5X-Nx-826"/>
+                        <outletCollection property="textFieldCollection" destination="bfw-ve-Q1Z" collectionClass="NSMutableArray" id="W1z-Lu-1js"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgw-ky-WFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

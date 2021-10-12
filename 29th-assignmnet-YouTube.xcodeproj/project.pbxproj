@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		15B70F86270B0B9F00767D1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B70F85270B0B9F00767D1C /* AppDelegate.swift */; };
 		15B70F88270B0B9F00767D1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B70F87270B0B9F00767D1C /* SceneDelegate.swift */; };
-		15B70F8A270B0B9F00767D1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B70F89270B0B9F00767D1C /* ViewController.swift */; };
 		15B70F8D270B0B9F00767D1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B70F8B270B0B9F00767D1C /* Main.storyboard */; };
 		15B70F8F270B0BA100767D1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B70F8E270B0BA100767D1C /* Assets.xcassets */; };
 		15B70F92270B0BA100767D1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B70F90270B0BA100767D1C /* LaunchScreen.storyboard */; };
@@ -19,10 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		15B70F82270B0B9F00767D1C /* 29th-week1-assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "29th-week1-assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15B70F82270B0B9F00767D1C /* 29th-assignmnet-YouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "29th-assignmnet-YouTube.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B70F85270B0B9F00767D1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15B70F87270B0B9F00767D1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		15B70F89270B0B9F00767D1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15B70F8C270B0B9F00767D1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15B70F8E270B0BA100767D1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15B70F91270B0BA100767D1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,10 +41,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1589114D271419C600CB7727 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1589115027141D3100CB7727 /* SignInViewController */,
+				1589114F27141D2600CB7727 /* CompleteViewController */,
+				1589114E27141D1900CB7727 /* SignUpViewController */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1589114E27141D1900CB7727 /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				15BAB895270C428E00795C7F /* SignUpViewController.swift */,
+			);
+			path = SignUpViewController;
+			sourceTree = "<group>";
+		};
+		1589114F27141D2600CB7727 /* CompleteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				15BAB897270C429F00795C7F /* CompleteViewController.swift */,
+			);
+			path = CompleteViewController;
+			sourceTree = "<group>";
+		};
+		1589115027141D3100CB7727 /* SignInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				15BAB893270C427C00795C7F /* SignInViewController.swift */,
+			);
+			path = SignInViewController;
+			sourceTree = "<group>";
+		};
 		15B70F79270B0B9F00767D1C = {
 			isa = PBXGroup;
 			children = (
-				15B70F84270B0B9F00767D1C /* 29th-week1-assignment */,
+				15B70F84270B0B9F00767D1C /* 29th-assignment-YouTube */,
 				15B70F83270B0B9F00767D1C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,34 +86,31 @@
 		15B70F83270B0B9F00767D1C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				15B70F82270B0B9F00767D1C /* 29th-week1-assignment.app */,
+				15B70F82270B0B9F00767D1C /* 29th-assignmnet-YouTube.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		15B70F84270B0B9F00767D1C /* 29th-week1-assignment */ = {
+		15B70F84270B0B9F00767D1C /* 29th-assignment-YouTube */ = {
 			isa = PBXGroup;
 			children = (
 				15B70F85270B0B9F00767D1C /* AppDelegate.swift */,
 				15B70F87270B0B9F00767D1C /* SceneDelegate.swift */,
-				15B70F89270B0B9F00767D1C /* ViewController.swift */,
 				15B70F8B270B0B9F00767D1C /* Main.storyboard */,
 				15B70F8E270B0BA100767D1C /* Assets.xcassets */,
 				15B70F90270B0BA100767D1C /* LaunchScreen.storyboard */,
 				15B70F93270B0BA100767D1C /* Info.plist */,
-				15BAB893270C427C00795C7F /* SignInViewController.swift */,
-				15BAB895270C428E00795C7F /* SignUpViewController.swift */,
-				15BAB897270C429F00795C7F /* CompleteViewController.swift */,
+				1589114D271419C600CB7727 /* Sources */,
 			);
-			path = "29th-week1-assignment";
+			path = "29th-assignment-YouTube";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		15B70F81270B0B9F00767D1C /* 29th-week1-assignment */ = {
+		15B70F81270B0B9F00767D1C /* 29th-assignmnet-YouTube */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 15B70F96270B0BA100767D1C /* Build configuration list for PBXNativeTarget "29th-week1-assignment" */;
+			buildConfigurationList = 15B70F96270B0BA100767D1C /* Build configuration list for PBXNativeTarget "29th-assignmnet-YouTube" */;
 			buildPhases = (
 				15B70F7E270B0B9F00767D1C /* Sources */,
 				15B70F7F270B0B9F00767D1C /* Frameworks */,
@@ -91,9 +120,9 @@
 			);
 			dependencies = (
 			);
-			name = "29th-week1-assignment";
+			name = "29th-assignmnet-YouTube";
 			productName = "29th-week1-assignment";
-			productReference = 15B70F82270B0B9F00767D1C /* 29th-week1-assignment.app */;
+			productReference = 15B70F82270B0B9F00767D1C /* 29th-assignmnet-YouTube.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +139,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 15B70F7D270B0B9F00767D1C /* Build configuration list for PBXProject "29th-week1-assignment" */;
+			buildConfigurationList = 15B70F7D270B0B9F00767D1C /* Build configuration list for PBXProject "29th-assignmnet-YouTube" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +152,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				15B70F81270B0B9F00767D1C /* 29th-week1-assignment */,
+				15B70F81270B0B9F00767D1C /* 29th-assignmnet-YouTube */,
 			);
 		};
 /* End PBXProject section */
@@ -147,7 +176,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				15BAB894270C427C00795C7F /* SignInViewController.swift in Sources */,
-				15B70F8A270B0B9F00767D1C /* ViewController.swift in Sources */,
 				15B70F86270B0B9F00767D1C /* AppDelegate.swift in Sources */,
 				15B70F88270B0B9F00767D1C /* SceneDelegate.swift in Sources */,
 				15BAB896270C428E00795C7F /* SignUpViewController.swift in Sources */,
@@ -300,12 +328,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T6LRAVDGQW;
-				INFOPLIST_FILE = "29th-week1-assignment/Info.plist";
+				INFOPLIST_FILE = "29th-assignment-YouTube/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "beans-bin.-9th-week1-assignment";
+				PRODUCT_BUNDLE_IDENTIFIER = "beans-bin.29th-assignment-YouTube";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,12 +347,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T6LRAVDGQW;
-				INFOPLIST_FILE = "29th-week1-assignment/Info.plist";
+				INFOPLIST_FILE = "29th-assignment-YouTube/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "beans-bin.-9th-week1-assignment";
+				PRODUCT_BUNDLE_IDENTIFIER = "beans-bin.29th-assignment-YouTube";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -334,7 +362,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		15B70F7D270B0B9F00767D1C /* Build configuration list for PBXProject "29th-week1-assignment" */ = {
+		15B70F7D270B0B9F00767D1C /* Build configuration list for PBXProject "29th-assignmnet-YouTube" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				15B70F94270B0BA100767D1C /* Debug */,
@@ -343,7 +371,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		15B70F96270B0BA100767D1C /* Build configuration list for PBXNativeTarget "29th-week1-assignment" */ = {
+		15B70F96270B0BA100767D1C /* Build configuration list for PBXNativeTarget "29th-assignmnet-YouTube" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				15B70F97270B0BA100767D1C /* Debug */,
