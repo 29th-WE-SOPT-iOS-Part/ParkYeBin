@@ -12,7 +12,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SignInViewController" id="BYZ-38-t0r" customClass="SignInViewController" customModule="_9th_week1_assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="BYZ-38-t0r" customClass="SignInViewController" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,7 +133,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="n5W-HB-vPq">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="CbX-cp-46z" customClass="SignUpViewController" customModule="_9th_week1_assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="CbX-cp-46z" customClass="SignUpViewController" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BfT-iW-L6P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -259,7 +259,7 @@
         <!--Complete View Controller-->
         <scene sceneID="4BQ-1R-uXf">
             <objects>
-                <viewController storyboardIdentifier="CompleteViewController" id="UaH-Hd-qGL" customClass="CompleteViewController" customModule="_9th_week1_assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompleteViewController" id="UaH-Hd-qGL" customClass="CompleteViewController" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SQJ-JB-XPp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,6 +288,15 @@
                                 </state>
                                 <connections>
                                     <action selector="touchUpToGoComplete:" destination="CbX-cp-46z" eventType="touchUpInside" id="aoz-nh-d80"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyb-hD-KnM">
+                                <rect key="frame" x="128" y="461" width="171" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="다른 계정으로 로그인하기"/>
+                                <connections>
+                                    <action selector="touchUpToGoSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsv-dx-Ix0"/>
                                 </connections>
                             </button>
                         </subviews>
