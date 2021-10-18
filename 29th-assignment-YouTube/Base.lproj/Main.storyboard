@@ -323,42 +323,10 @@
             </objects>
             <point key="canvasLocation" x="2482.608695652174" y="91.741071428571431"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="s2q-Po-hD7">
-            <objects>
-                <viewController id="RJF-X8-AK2" customClass="ShortsVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Lf1-7y-yst">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="aFO-ja-RKb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Qsd-ii-Ilq"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aU5-H4-EcB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4833" y="102"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="S0A-qT-oNt">
-            <objects>
-                <viewController id="GJD-BH-Wgd" customClass="HomeVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PHX-6W-ajD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="JRY-D7-IeQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="iuc-uu-Qi8"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BvU-Ec-Tmm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4052" y="102"/>
-        </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom TabbarVC-->
         <scene sceneID="0vK-35-VhN">
             <objects>
-                <tabBarController id="8pG-NA-5QA" sceneMemberID="viewController">
+                <tabBarController id="8pG-NA-5QA" customClass="CustomTabbarVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bUX-An-8o7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -368,6 +336,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyd-Sz-AEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3281" y="102"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="p50-DF-CQ9">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="q7v-mH-UVK" customClass="HomeVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ve2-w5-J7H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xUd-Id-Kfy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UjW-xt-x2r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4032" y="102"/>
+        </scene>
+        <!--ShortsVC-->
+        <scene sceneID="KK2-bX-mWC">
+            <objects>
+                <viewController storyboardIdentifier="ShortsVC" id="HXf-KL-aOU" customClass="ShortsVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8dU-zE-pDq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="htH-Bt-BrQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rci-WO-f4Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4816" y="117"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oIQ-7k-2n2">
+            <objects>
+                <viewController id="PAg-eb-jqm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CCo-E8-AhF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bVd-3x-s7e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpP-QL-hPz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4032" y="785"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uLL-gn-nOo">
@@ -387,53 +400,50 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="92.410714285714278"/>
         </scene>
-        <!--Item 1-->
-        <scene sceneID="qUd-iJ-L8B">
+        <!--AddVC-->
+        <scene sceneID="L9Y-fM-TyD">
             <objects>
-                <viewController id="5yq-V5-9fZ" customClass="KeepVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qht-SE-JbZ">
+                <viewController storyboardIdentifier="AddVC" id="lQK-wy-Uok" customClass="AddVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Qy-HG-7au">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="as9-hX-FeM"/>
+                        <viewLayoutGuide key="safeArea" id="D3u-iL-ysz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="huX-5A-YFl"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3qY-fH-eBx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6M-ZX-28P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5684" y="102"/>
+            <point key="canvasLocation" x="4032" y="785"/>
         </scene>
-        <!--Item 1-->
-        <scene sceneID="UFo-20-GY1">
+        <!--SubscribeVC-->
+        <scene sceneID="3Bc-15-oCb">
             <objects>
-                <viewController id="2jP-iW-koD" customClass="AddVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="teB-Xg-wiX">
+                <viewController storyboardIdentifier="SubscribeVC" id="9H5-ms-1OH" customClass="SubscribeVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8KU-fJ-TNZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="iYv-QJ-aQO"/>
+                        <viewLayoutGuide key="safeArea" id="Iln-Rz-lEG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="XgM-we-Bxa"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JEI-fg-bGq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfc-UO-Y5N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4051" y="813"/>
+            <point key="canvasLocation" x="4816" y="785"/>
         </scene>
-        <!--Item 1-->
-        <scene sceneID="zJ2-Nu-FeN">
+        <!--KeepVC-->
+        <scene sceneID="xxY-7k-oPO">
             <objects>
-                <viewController id="yBr-zb-1Kh" customClass="SubscribeVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zbJ-JC-M4U">
+                <viewController storyboardIdentifier="KeepVC" id="ihA-Zb-J3J" customClass="KeepVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VgC-s7-zQj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Yis-qW-9SV"/>
+                        <viewLayoutGuide key="safeArea" id="UBH-Dh-nE3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="myF-rD-l5W"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4c4-Tu-vuh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NqE-dd-N3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4832" y="813"/>
+            <point key="canvasLocation" x="4032" y="1467"/>
         </scene>
     </scenes>
     <resources>

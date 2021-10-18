@@ -7,14 +7,22 @@
 
 import UIKit
 
-class CustomTabbarVC: UITabBar {
+class CustomTabbarVC: UITabBarController {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    override func viewDidLoad() {
+        <#code#>
     }
-    */
+    
+    func setTabBar() {
+        guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC"),
+              let shortsVC = self.storyboard?.instantiateViewController(withIdentifier: "ShortsVC"),
+              let addVC = self.storyboard?.instantiateViewController(withIdentifier: "AddVC"),
+              let subscribeVC = self.storyboard?.instantiateViewController(withIdentifier: "SubscribeVC"),
+              let keepVC = self.storyboard?.instantiateViewController(withIdentifier: "KeepVC") else { return }
+        
+        homeVC.tabBarItem.title = "홈"
+        homeVC.tabBarItem.image = UIImage(systemName: "House")
+        
+    }
 
 }
