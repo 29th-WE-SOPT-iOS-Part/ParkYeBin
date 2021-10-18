@@ -13,6 +13,7 @@ class CompleteViewController: UIViewController {
     @IBOutlet weak var nextBtn: UIButton!
     var name: String?
     var isFromSignUp: Bool?
+    var rootView: SignUpViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +32,12 @@ class CompleteViewController: UIViewController {
     }
     
     @IBAction func touchUpToGoLogin(_ sender: Any) {
-        if let isFromSignUp = isFromSignUp {
-            let viewControllers : [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
 
-                self.navigationController?.popToViewController(viewControllers[viewControllers.count - 3 ], animated: false)
-            return
+        self.dismiss(animated: false) { [self] in
+            if let isFromSignUp = self.isFromSignUp {
+                self.rootView?.navigationController?.popViewController(animated: false)
+            }
         }
-        
-        self.dismiss(animated: false)
     }
 }
 

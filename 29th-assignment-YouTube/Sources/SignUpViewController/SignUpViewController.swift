@@ -66,7 +66,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         nextVC.name = self.nameTextField.text
         nextVC.isFromSignUp = true
+        nextVC.rootView = self
         nextVC.modalPresentationStyle = .fullScreen
+        
         self.present(nextVC, animated: false, completion: nil)
     }
     
