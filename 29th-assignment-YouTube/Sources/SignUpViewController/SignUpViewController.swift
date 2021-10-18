@@ -65,6 +65,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") as? CompleteViewController else { return }
         
         nextVC.name = self.nameTextField.text
+        nextVC.isFromSignUp = true
         nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: false, completion: nil)
     }

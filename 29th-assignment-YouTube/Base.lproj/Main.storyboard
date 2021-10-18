@@ -297,6 +297,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="다른 계정으로 로그인하기"/>
                                 <connections>
+                                    <action selector="touchUpToGoLogin:" destination="UaH-Hd-qGL" eventType="touchUpInside" id="jMf-DF-q2c"/>
                                     <action selector="touchUpToGoSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsv-dx-Ix0"/>
                                 </connections>
                             </button>
