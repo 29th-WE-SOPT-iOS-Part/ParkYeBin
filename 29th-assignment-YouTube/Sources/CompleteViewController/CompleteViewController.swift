@@ -24,5 +24,10 @@ class CompleteViewController: UIViewController {
         self.nextBtn.backgroundColor = UIColor.systemBlue
     }
     
-
+    @IBAction func touchUpToGoNext(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CustomTabbarVC") else { return }
+        nextVC.modalPresentationStyle = .fullScreen
+        self.present(nextVC, animated: false)
+    }
+    
 }

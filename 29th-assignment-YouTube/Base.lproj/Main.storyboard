@@ -288,10 +288,11 @@
                                 </state>
                                 <connections>
                                     <action selector="touchUpToGoComplete:" destination="CbX-cp-46z" eventType="touchUpInside" id="aoz-nh-d80"/>
+                                    <action selector="touchUpToGoNext:" destination="UaH-Hd-qGL" eventType="touchUpInside" id="cjM-MK-ndL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyb-hD-KnM">
-                                <rect key="frame" x="128" y="461" width="171" height="33"/>
+                                <rect key="frame" x="128" y="516" width="171" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="다른 계정으로 로그인하기"/>
@@ -326,7 +327,7 @@
         <!--Custom TabbarVC-->
         <scene sceneID="0vK-35-VhN">
             <objects>
-                <tabBarController id="8pG-NA-5QA" customClass="CustomTabbarVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="CustomTabbarVC" id="8pG-NA-5QA" customClass="CustomTabbarVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bUX-An-8o7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

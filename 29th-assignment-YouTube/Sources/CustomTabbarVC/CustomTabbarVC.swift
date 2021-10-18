@@ -10,7 +10,8 @@ import UIKit
 class CustomTabbarVC: UITabBarController {
 
     override func viewDidLoad() {
-        <#code#>
+        super.viewDidLoad()
+        setTabBar()
     }
     
     func setTabBar() {
@@ -21,8 +22,23 @@ class CustomTabbarVC: UITabBarController {
               let keepVC = self.storyboard?.instantiateViewController(withIdentifier: "KeepVC") else { return }
         
         homeVC.tabBarItem.title = "홈"
-        homeVC.tabBarItem.image = UIImage(systemName: "House")
+        homeVC.tabBarItem.image = UIImage(named: "homeIcon")
+        homeVC.tabBarItem.selectedImage = UIImage(named: "homeIconFill")
+        shortsVC.tabBarItem.title = "Shorts"
+        shortsVC.tabBarItem.image = UIImage(named: "shortsIcon")
+        shortsVC.tabBarItem.selectedImage = UIImage(named: "shortsIconFill")
+        addVC.tabBarItem.title = "추가"
+        addVC.tabBarItem.image = UIImage(named: "plusCircleIcon")
+        addVC.tabBarItem.selectedImage = UIImage(named: "plusCircleIconFill")
+        subscribeVC.tabBarItem.title = "구독"
+        subscribeVC.tabBarItem.image = UIImage(named: "subscribtionIcon")
+        subscribeVC.tabBarItem.selectedImage = UIImage(named: "subscriptionIconFill")
+        keepVC.tabBarItem.title = "보관함"
+        keepVC.tabBarItem.image = UIImage(named: "LibraryIcon")
+        keepVC.tabBarItem.selectedImage = UIImage(named: "LibraryIconFill")
         
+        
+        setViewControllers([homeVC, shortsVC, addVC, subscribeVC, keepVC], animated: true)
     }
 
 }
