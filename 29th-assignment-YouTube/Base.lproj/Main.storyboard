@@ -326,7 +326,7 @@
         <!--Item 2-->
         <scene sceneID="s2q-Po-hD7">
             <objects>
-                <viewController id="RJF-X8-AK2" sceneMemberID="viewController">
+                <viewController id="RJF-X8-AK2" customClass="ShortsVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lf1-7y-yst">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -342,7 +342,7 @@
         <!--Item 1-->
         <scene sceneID="S0A-qT-oNt">
             <objects>
-                <viewController id="GJD-BH-Wgd" sceneMemberID="viewController">
+                <viewController id="GJD-BH-Wgd" customClass="HomeVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PHX-6W-ajD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -390,7 +390,7 @@
         <!--Item 1-->
         <scene sceneID="qUd-iJ-L8B">
             <objects>
-                <viewController id="5yq-V5-9fZ" sceneMemberID="viewController">
+                <viewController id="5yq-V5-9fZ" customClass="KeepVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qht-SE-JbZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -406,7 +406,7 @@
         <!--Item 1-->
         <scene sceneID="UFo-20-GY1">
             <objects>
-                <viewController id="2jP-iW-koD" sceneMemberID="viewController">
+                <viewController id="2jP-iW-koD" customClass="AddVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="teB-Xg-wiX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -422,7 +422,7 @@
         <!--Item 1-->
         <scene sceneID="zJ2-Nu-FeN">
             <objects>
-                <viewController id="yBr-zb-1Kh" sceneMemberID="viewController">
+                <viewController id="yBr-zb-1Kh" customClass="SubscribeVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zbJ-JC-M4U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
