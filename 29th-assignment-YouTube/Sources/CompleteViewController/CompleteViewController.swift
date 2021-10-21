@@ -21,7 +21,7 @@ class CompleteViewController: UIViewController {
         self.welcomeLabel.text = self.name! + "님 환영합니다!"
         
         self.nextBtn.backgroundColor = UIColor.systemBlue
-        self.nextBtn.layer.cornerRadius = 10
+        self.nextBtn.layer.cornerRadius = 4
         self.nextBtn.backgroundColor = UIColor.systemBlue
     }
     

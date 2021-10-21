@@ -264,24 +264,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ㅇㅇㅇ님 환영합니다!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU1-Wh-hnx">
-                                <rect key="frame" x="140" y="270" width="134" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="RZw-KY-JlG"/>
-                                    <constraint firstAttribute="width" constant="134" id="mMc-Vg-6X2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <rect key="frame" x="123" y="378" width="167" height="62.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="FVQ-ku-9tl">
-                                <rect key="frame" x="128" y="176" width="172" height="62"/>
+                                <rect key="frame" x="128" y="293" width="157" height="62"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyd-Wt-n3K">
-                                <rect key="frame" x="43" y="444" width="329" height="50"/>
+                                <rect key="frame" x="22" y="493.5" width="370" height="42"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="usp-3b-ReB"/>
+                                    <constraint firstAttribute="height" constant="42" id="Ozq-kK-kUS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <state key="normal" title="다음">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -290,10 +286,9 @@
                                     <action selector="touchUpToGoNext:" destination="UaH-Hd-qGL" eventType="touchUpInside" id="cjM-MK-ndL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyb-hD-KnM">
-                                <rect key="frame" x="128" y="516" width="171" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyb-hD-KnM">
+                                <rect key="frame" x="113" y="558.5" width="190" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="다른 계정으로 로그인하기"/>
                                 <connections>
                                     <action selector="touchUpToGoLogin:" destination="UaH-Hd-qGL" eventType="touchUpInside" id="jMf-DF-q2c"/>
@@ -304,15 +299,18 @@
                         <viewLayoutGuide key="safeArea" id="Fwq-Sa-0V3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fyd-Wt-n3K" firstAttribute="centerX" secondItem="Fwq-Sa-0V3" secondAttribute="centerX" constant="0.5" id="1kX-64-KE9"/>
-                            <constraint firstItem="sU1-Wh-hnx" firstAttribute="centerX" secondItem="Fwq-Sa-0V3" secondAttribute="centerX" id="9Cg-vx-n2x"/>
-                            <constraint firstItem="FVQ-ku-9tl" firstAttribute="leading" secondItem="Fwq-Sa-0V3" secondAttribute="leading" constant="128" id="Dkd-5M-XO5"/>
-                            <constraint firstItem="sU1-Wh-hnx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Fwq-Sa-0V3" secondAttribute="leading" id="H3w-Xh-dWk"/>
-                            <constraint firstItem="sU1-Wh-hnx" firstAttribute="top" secondItem="FVQ-ku-9tl" secondAttribute="bottom" constant="32" id="YEg-48-Xbf"/>
-                            <constraint firstItem="fyd-Wt-n3K" firstAttribute="top" secondItem="sU1-Wh-hnx" secondAttribute="bottom" constant="54" id="ZnI-Ww-6rE"/>
-                            <constraint firstItem="FVQ-ku-9tl" firstAttribute="centerX" secondItem="Fwq-Sa-0V3" secondAttribute="centerX" constant="7" id="mmX-FC-mwK"/>
-                            <constraint firstItem="FVQ-ku-9tl" firstAttribute="top" secondItem="Fwq-Sa-0V3" secondAttribute="top" constant="132" id="vVR-iV-Gl0"/>
-                            <constraint firstItem="fyd-Wt-n3K" firstAttribute="leading" secondItem="Fwq-Sa-0V3" secondAttribute="leading" constant="43" id="yPy-u0-99B"/>
+                            <constraint firstItem="Kyb-hD-KnM" firstAttribute="top" secondItem="fyd-Wt-n3K" secondAttribute="bottom" constant="23" id="5AB-UY-Lxl"/>
+                            <constraint firstItem="sU1-Wh-hnx" firstAttribute="leading" secondItem="Fwq-Sa-0V3" secondAttribute="leading" constant="123" id="G3D-LE-11o"/>
+                            <constraint firstItem="FVQ-ku-9tl" firstAttribute="top" secondItem="Fwq-Sa-0V3" secondAttribute="top" constant="249" id="WdB-bH-o0g"/>
+                            <constraint firstItem="Kyb-hD-KnM" firstAttribute="leading" secondItem="Fwq-Sa-0V3" secondAttribute="leading" constant="113" id="ZcT-zh-9l9"/>
+                            <constraint firstItem="Fwq-Sa-0V3" firstAttribute="trailing" secondItem="FVQ-ku-9tl" secondAttribute="trailing" constant="129" id="gjc-Mg-QgU"/>
+                            <constraint firstItem="FVQ-ku-9tl" firstAttribute="leading" secondItem="Fwq-Sa-0V3" secondAttribute="leading" constant="128" id="jdG-1y-MgO"/>
+                            <constraint firstItem="Fwq-Sa-0V3" firstAttribute="trailing" secondItem="sU1-Wh-hnx" secondAttribute="trailing" constant="124" id="lRP-zl-79o"/>
+                            <constraint firstItem="sU1-Wh-hnx" firstAttribute="top" secondItem="FVQ-ku-9tl" secondAttribute="bottom" constant="23" id="nRT-1R-Jps"/>
+                            <constraint firstItem="fyd-Wt-n3K" firstAttribute="leading" secondItem="Fwq-Sa-0V3" secondAttribute="leading" constant="22" id="nnO-wD-WlL"/>
+                            <constraint firstItem="Fwq-Sa-0V3" firstAttribute="trailing" secondItem="Kyb-hD-KnM" secondAttribute="trailing" constant="111" id="o8Y-5X-kI6"/>
+                            <constraint firstItem="Fwq-Sa-0V3" firstAttribute="trailing" secondItem="fyd-Wt-n3K" secondAttribute="trailing" constant="22" id="oUp-tP-78i"/>
+                            <constraint firstItem="fyd-Wt-n3K" firstAttribute="top" secondItem="sU1-Wh-hnx" secondAttribute="bottom" constant="53" id="r7z-eD-acK"/>
                         </constraints>
                     </view>
                     <connections>
