@@ -27,7 +27,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     func setUI() {
         self.nextBtn.isEnabled = false
         self.nextBtn.backgroundColor = UIColor.systemBlue
-        self.nextBtn.layer.cornerRadius = 10
+        self.nextBtn.layer.cornerRadius = 4
         self.nextBtn.backgroundColor = UIColor.lightGray
         
         setTextFieldUI()
@@ -38,7 +38,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             i.delegate = self
             i.layer.borderWidth = 1
             i.layer.borderColor = UIColor.lightGray.cgColor
-            i.layer.cornerRadius = 10
+            i.layer.cornerRadius = 8
             i.addLeftPadding()
         }
     }
