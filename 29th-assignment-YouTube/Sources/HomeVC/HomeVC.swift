@@ -10,6 +10,7 @@ import UIKit
 class HomeVC: UIViewController {
 
     @IBOutlet weak var storyCollectionView: UICollectionView!
+    @IBOutlet weak var filterCollectionView: UICollectionView!
     @IBOutlet weak var mainTableView: UITableView!
     
     var storyContentList: [StoryDataModel] = []
@@ -21,8 +22,12 @@ class HomeVC: UIViewController {
         initContentList()
         registerXib()
         storyCollectionView.dataSource = self
+        filterCollectionView.dataSource = self
+        storyCollectionView.register(UICollectionView.self, forCellWithReuseIdentifier: "filterCell")
+        filterCollectionView.register(UICollectionView.self, forCellWithReuseIdentifier: "filterCell")
         mainTableView.delegate = self
         mainTableView.dataSource = self
+        
 
     }
     
@@ -46,14 +51,21 @@ class HomeVC: UIViewController {
 // MARK: TableView
 extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 306
+        if tableView == mainTableView {
+            return 306
+        } else {
+            return 48
+        }
     }
-    
 }
 
 extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if tableView == mainTableView {
+            return 10
+        } else {
+            return 6
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
