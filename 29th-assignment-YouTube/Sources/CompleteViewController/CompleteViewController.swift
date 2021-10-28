@@ -29,7 +29,6 @@ class CompleteViewController: UIViewController {
         self.nextBtn.layer.cornerRadius = 4
         self.nextBtn.backgroundColor = UIColor.buttonBlue
         
-        self.loginBtn.titleColor(for: .normal) = UIColor.buttonBlue
     }
     
     @IBAction func touchUpToGoNext(_ sender: Any) {

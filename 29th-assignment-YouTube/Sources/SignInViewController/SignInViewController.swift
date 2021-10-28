@@ -31,8 +31,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         self.nextBtn.layer.cornerRadius = 4
         self.nextBtn.backgroundColor = UIColor.lightGray
         
-        self.signUpBtn.titleColor(for: .normal) = UIColor.buttonBlue
-        
         
         setTextFieldUI()
     }
