@@ -121,6 +121,7 @@
                         <outlet property="nameTextField" destination="aQj-bi-ZHP" id="iY9-8r-dbq"/>
                         <outlet property="nextBtn" destination="MSK-Cn-YPH" id="DDm-m8-C1O"/>
                         <outlet property="pwTextField" destination="gyc-sf-NDJ" id="6zQ-eR-wz2"/>
+                        <outlet property="signUpBtn" destination="4Lh-cJ-MSG" id="rSN-Po-JHz"/>
                         <outletCollection property="textFieldCollection" destination="aQj-bi-ZHP" collectionClass="NSMutableArray" id="Wie-R0-1vk"/>
                         <outletCollection property="textFieldCollection" destination="BNu-cS-VIw" collectionClass="NSMutableArray" id="y5I-NK-2Yo"/>
                         <outletCollection property="textFieldCollection" destination="gyc-sf-NDJ" collectionClass="NSMutableArray" id="ftR-uD-x7K"/>
@@ -314,6 +315,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginBtn" destination="Kyb-hD-KnM" id="AHN-qQ-6ze"/>
                         <outlet property="nextBtn" destination="fyd-Wt-n3K" id="AKQ-pl-Gbs"/>
                         <outlet property="welcomeLabel" destination="sU1-Wh-hnx" id="533-vr-k0G"/>
                     </connections>

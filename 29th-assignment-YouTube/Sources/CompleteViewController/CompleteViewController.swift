@@ -11,6 +11,7 @@ class CompleteViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var loginBtn: UIButton!
     var name: String?
     var isFromSignUp: Bool?
     var rootView: SignUpViewController?
@@ -18,11 +19,17 @@ class CompleteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setUI()
+    }
+    
+    func setUI() {
         self.welcomeLabel.text = self.name! + "님 환영합니다!"
         
-        self.nextBtn.backgroundColor = UIColor.systemBlue
+        self.nextBtn.backgroundColor = UIColor.buttonBlue
         self.nextBtn.layer.cornerRadius = 4
-        self.nextBtn.backgroundColor = UIColor.systemBlue
+        self.nextBtn.backgroundColor = UIColor.buttonBlue
+        
+        self.loginBtn.titleColor(for: .normal) = UIColor.buttonBlue
     }
     
     @IBAction func touchUpToGoNext(_ sender: Any) {
@@ -38,15 +45,5 @@ class CompleteViewController: UIViewController {
                 self.rootView?.navigationController?.popViewController(animated: false)
             }
         }
-    }
-}
-
-extension UINavigationController {
-    func popViewController(animated: Bool, completion:@escaping (()->())) -> UIViewController? {
-        CATransaction.setCompletionBlock(completion)
-        CATransaction.begin()
-        let poppedViewController = self.popViewController(animated: animated)
-        CATransaction.commit()
-        return poppedViewController
     }
 }

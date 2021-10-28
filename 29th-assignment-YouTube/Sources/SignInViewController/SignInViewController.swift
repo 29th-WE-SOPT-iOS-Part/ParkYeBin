@@ -12,6 +12,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet var textFieldCollection: [UITextField]!
     
     override func viewDidLoad() {
@@ -26,20 +27,23 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     
     func setUI() {
         self.nextBtn.isEnabled = false
-        self.nextBtn.backgroundColor = UIColor.systemBlue
+        self.nextBtn.backgroundColor = UIColor.buttonBlue
         self.nextBtn.layer.cornerRadius = 4
         self.nextBtn.backgroundColor = UIColor.lightGray
+        
+        self.signUpBtn.titleColor(for: .normal) = UIColor.buttonBlue
+        
         
         setTextFieldUI()
     }
     
     func setTextFieldUI() {
-        for i in textFieldCollection {
-            i.delegate = self
-            i.layer.borderWidth = 1
-            i.layer.borderColor = UIColor.lightGray.cgColor
-            i.layer.cornerRadius = 8
-            i.addLeftPadding()
+        for textField in textFieldCollection {
+            textField.delegate = self
+            textField.layer.borderWidth = 1
+            textField.layer.borderColor = UIColor.lightGray.cgColor
+            textField.layer.cornerRadius = 8
+            textField.addLeftPadding()
         }
     }
     
@@ -68,10 +72,3 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-extension UITextField {
-  func addLeftPadding() {
-    let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: self.frame.height))
-    self.leftView = paddingView
-    self.leftViewMode = ViewMode.always
-  }
-}

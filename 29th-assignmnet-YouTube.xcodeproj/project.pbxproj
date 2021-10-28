@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15B2AE83272AF8ED00FFC5B2 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2AE82272AF8ED00FFC5B2 /* UINavigationController.swift */; };
+		15B2AE85272AFA2900FFC5B2 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2AE84272AFA2900FFC5B2 /* UITextField.swift */; };
+		15B2AE87272AFDD800FFC5B2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2AE86272AFDD800FFC5B2 /* UIColor.swift */; };
 		15B70F86270B0B9F00767D1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B70F85270B0B9F00767D1C /* AppDelegate.swift */; };
 		15B70F88270B0B9F00767D1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B70F87270B0B9F00767D1C /* SceneDelegate.swift */; };
 		15B70F8D270B0B9F00767D1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B70F8B270B0B9F00767D1C /* Main.storyboard */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15B2AE82272AF8ED00FFC5B2 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		15B2AE84272AFA2900FFC5B2 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		15B2AE86272AFDD800FFC5B2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		15B70F82270B0B9F00767D1C /* 29th-assignmnet-YouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "29th-assignmnet-YouTube.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B70F85270B0B9F00767D1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15B70F87270B0B9F00767D1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +99,16 @@
 			path = SignInViewController;
 			sourceTree = "<group>";
 		};
+		15B2AE81272AF8B100FFC5B2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				15B2AE82272AF8ED00FFC5B2 /* UINavigationController.swift */,
+				15B2AE84272AFA2900FFC5B2 /* UITextField.swift */,
+				15B2AE86272AFDD800FFC5B2 /* UIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		15B70F79270B0B9F00767D1C = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +135,7 @@
 				15B70F90270B0BA100767D1C /* LaunchScreen.storyboard */,
 				15B70F93270B0BA100767D1C /* Info.plist */,
 				1589114D271419C600CB7727 /* Sources */,
+				15B2AE81272AF8B100FFC5B2 /* Extension */,
 			);
 			path = "29th-assignment-YouTube";
 			sourceTree = "<group>";
@@ -242,14 +259,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				15BAB894270C427C00795C7F /* SignInViewController.swift in Sources */,
+				15B2AE87272AFDD800FFC5B2 /* UIColor.swift in Sources */,
 				15B70F86270B0B9F00767D1C /* AppDelegate.swift in Sources */,
 				15B70F88270B0B9F00767D1C /* SceneDelegate.swift in Sources */,
 				15F3BA39271DCE0C00D51D4E /* AddVC.swift in Sources */,
 				15BAB896270C428E00795C7F /* SignUpViewController.swift in Sources */,
+				15B2AE85272AFA2900FFC5B2 /* UITextField.swift in Sources */,
 				15F3BA3D271DCE4400D51D4E /* KeepVC.swift in Sources */,
 				15F3BA32271DCBBB00D51D4E /* CustomTabbarVC.swift in Sources */,
 				15BAB898270C429F00795C7F /* CompleteViewController.swift in Sources */,
 				15F3BA35271DCD7D00D51D4E /* HomeVC.swift in Sources */,
+				15B2AE83272AF8ED00FFC5B2 /* UINavigationController.swift in Sources */,
 				15F3BA37271DCDD500D51D4E /* ShortsVC.swift in Sources */,
 				15F3BA3B271DCE2800D51D4E /* SubscribeVC.swift in Sources */,
 			);
