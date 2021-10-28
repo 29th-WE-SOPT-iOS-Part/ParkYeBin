@@ -40,13 +40,3 @@ class CompleteViewController: UIViewController {
         }
     }
 }
-
-extension UINavigationController {
-    func popViewController(animated: Bool, completion:@escaping (()->())) -> UIViewController? {
-        CATransaction.setCompletionBlock(completion)
-        CATransaction.begin()
-        let poppedViewController = self.popViewController(animated: animated)
-        CATransaction.commit()
-        return poppedViewController
-    }
-}
