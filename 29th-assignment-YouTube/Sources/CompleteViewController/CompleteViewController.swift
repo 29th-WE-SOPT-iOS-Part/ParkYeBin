@@ -18,6 +18,10 @@ class CompleteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setUI()
+    }
+    
+    func setUI() {
         self.welcomeLabel.text = self.name! + "님 환영합니다!"
         
         self.nextBtn.backgroundColor = UIColor.systemBlue
