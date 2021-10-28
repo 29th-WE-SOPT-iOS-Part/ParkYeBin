@@ -21,21 +21,11 @@ class CustomTabbarVC: UITabBarController {
               let subscribeVC = self.storyboard?.instantiateViewController(withIdentifier: "SubscribeVC"),
               let keepVC = self.storyboard?.instantiateViewController(withIdentifier: "KeepVC") else { return }
         
-        homeVC.tabBarItem.title = "홈"
-        homeVC.tabBarItem.image = UIImage(named: "homeIcon")
-        homeVC.tabBarItem.selectedImage = UIImage(named: "homeIconFill")
-        shortsVC.tabBarItem.title = "Shorts"
-        shortsVC.tabBarItem.image = UIImage(named: "shortsIcon")
-        shortsVC.tabBarItem.selectedImage = UIImage(named: "shortsIconFill")
-        addVC.tabBarItem.title = "추가"
-        addVC.tabBarItem.image = UIImage(named: "plusCircleIcon")
-        addVC.tabBarItem.selectedImage = UIImage(named: "plusCircleIconFill")
-        subscribeVC.tabBarItem.title = "구독"
-        subscribeVC.tabBarItem.image = UIImage(named: "subscribtionIcon")
-        subscribeVC.tabBarItem.selectedImage = UIImage(named: "subscriptionIconFill")
-        keepVC.tabBarItem.title = "보관함"
-        keepVC.tabBarItem.image = UIImage(named: "LibraryIcon")
-        keepVC.tabBarItem.selectedImage = UIImage(named: "LibraryIconFill")
+        homeVC.tabBarItem = UITabBarItem(title: "홈", image: UIImage(named: "homeIcon"), selectedImage:  UIImage(named: "homeIconFill"))
+        shortsVC.tabBarItem  = UITabBarItem(title: "Shorts", image: UIImage(named: "shortsIcon"), selectedImage: UIImage(named: "shortsIconFill"))
+        addVC.tabBarItem  = UITabBarItem(title: "추가", image: UIImage(named: "plusCircleIcon"), selectedImage: UIImage(named: "plusCircleIconFill"))
+        subscribeVC.tabBarItem  = UITabBarItem(title: "구독", image: UIImage(named: "subscribtionIcon"), selectedImage: UIImage(named: "subscriptionIconFill"))
+        keepVC.tabBarItem  = UITabBarItem(title: "보관함", image: UIImage(named: "LibraryIcon"), selectedImage: UIImage(named: "LibraryIconFill"))
         
         
         setViewControllers([homeVC, shortsVC, addVC, subscribeVC, keepVC], animated: true)
