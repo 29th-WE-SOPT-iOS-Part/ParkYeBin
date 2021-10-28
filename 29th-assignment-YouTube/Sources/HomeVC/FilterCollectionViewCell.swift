@@ -8,6 +8,8 @@
 import UIKit
 
 class FilterCollectionViewCell: UICollectionViewCell {
+    static let identifier = "FilterCollectionViewCell"
+    
     @IBOutlet weak var filterButton: UIButton!
     
 }

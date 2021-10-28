@@ -22,8 +22,8 @@ class HomeVC: UIViewController {
         registerXib()
         storyCollectionView.dataSource = self
         filterCollectionView.dataSource = self
-        storyCollectionView.register(UICollectionView.self, forCellWithReuseIdentifier: "filterCell")
-        filterCollectionView.register(UICollectionView.self, forCellWithReuseIdentifier: "filterCell")
+//        storyCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "StoryCollectionViewCell")
+        //filterCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "FilterCollectionViewCell")
         mainTableView.delegate = self
         mainTableView.dataSource = self
         
@@ -90,10 +90,10 @@ extension HomeVC: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as? StoryCollectionViewCell else {return UICollectionViewCell()}
             
             cell.setData(storyName: storyContentList[indexPath.row].storyName, storyImage: storyContentList[indexPath.row].makeImage())
-        
             return cell
         } else {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as? StoryCollectionViewCell else {return UICollectionViewCell()}
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewCell.identifier, for: indexPath) as? FilterCollectionViewCell else {return UICollectionViewCell()}
+            cell.filterButton.setImage(UIImage(named: "filter-" + String(indexPath.row + 1)), for: .normal)
             
             return cell
         }
