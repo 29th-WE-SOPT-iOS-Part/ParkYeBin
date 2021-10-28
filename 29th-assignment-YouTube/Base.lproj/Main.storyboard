@@ -431,6 +431,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="72" height="104"/>
+                                        <connections>
+                                            <outlet property="storyImage" destination="561-dC-AoR" id="dYm-6Z-79h"/>
+                                            <outlet property="storyImageView" destination="561-dC-AoR" id="HaV-sc-BR7"/>
+                                            <outlet property="storyNameLabel" destination="yiP-KS-EB8" id="lZb-eI-mbZ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

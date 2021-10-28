@@ -9,4 +9,11 @@ import UIKit
 
 class StoryCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var storyImageView: UIImageView!
+    @IBOutlet weak var storyNameLabel: UILabel!
+    
+    func setData(storyName: String, storyImage: UIImage?) {
+        storyImageView.image = storyImage
+        storyNameLabel.text = storyName
+    }
 }
