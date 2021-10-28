@@ -28,6 +28,7 @@
 		15F3BA39271DCE0C00D51D4E /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F3BA38271DCE0C00D51D4E /* AddVC.swift */; };
 		15F3BA3B271DCE2800D51D4E /* SubscribeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F3BA3A271DCE2800D51D4E /* SubscribeVC.swift */; };
 		15F3BA3D271DCE4400D51D4E /* KeepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F3BA3C271DCE4400D51D4E /* KeepVC.swift */; };
+		15FF7ED9272B35E7004BE9D1 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FF7ED8272B35E7004BE9D1 /* FilterCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		15F3BA38271DCE0C00D51D4E /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
 		15F3BA3A271DCE2800D51D4E /* SubscribeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeVC.swift; sourceTree = "<group>"; };
 		15F3BA3C271DCE4400D51D4E /* KeepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepVC.swift; sourceTree = "<group>"; };
+		15FF7ED8272B35E7004BE9D1 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				15B2AE8A272B17BA00FFC5B2 /* StoryDataModel.swift */,
 				15B2AE92272B24D700FFC5B2 /* HomeTableViewCell.swift */,
 				15B2AE93272B24D700FFC5B2 /* HomeTableViewCell.xib */,
+				15FF7ED8272B35E7004BE9D1 /* FilterCollectionViewCell.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				15F3BA3D271DCE4400D51D4E /* KeepVC.swift in Sources */,
 				15F3BA32271DCBBB00D51D4E /* CustomTabbarVC.swift in Sources */,
 				15BAB898270C429F00795C7F /* CompleteViewController.swift in Sources */,
+				15FF7ED9272B35E7004BE9D1 /* FilterCollectionViewCell.swift in Sources */,
 				15B2AE89272B139300FFC5B2 /* StoryCollectionViewCell.swift in Sources */,
 				15B2AE8B272B17BB00FFC5B2 /* StoryDataModel.swift in Sources */,
 				15F3BA35271DCD7D00D51D4E /* HomeVC.swift in Sources */,

@@ -456,7 +456,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filterCell" id="JO8-b6-ftg">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filterCell" id="JO8-b6-ftg" customClass="FilterCollectionViewCell" customModule="_9th_assignmnet_YouTube" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8yO-cS-Nfq">
@@ -466,7 +466,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGP-XB-1ol">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="32"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="filter-1"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -477,6 +477,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="128" height="32"/>
+                                        <connections>
+                                            <outlet property="filterButton" destination="bGP-XB-1ol" id="KMN-3H-jKS"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -606,6 +609,7 @@
     </scenes>
     <resources>
         <image name="alarm" width="32" height="32"/>
+        <image name="filter-1" width="46" height="32"/>
         <image name="finder" width="32" height="32"/>
         <image name="ggamju1" width="58" height="58"/>
         <image name="googleLogo" width="184" height="62"/>

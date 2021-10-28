@@ -15,7 +15,6 @@ class HomeVC: UIViewController {
     
     var storyContentList: [StoryDataModel] = []
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -78,15 +77,27 @@ extension HomeVC: UITableViewDataSource {
 // MARK: CollectionView
 extension HomeVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return storyContentList.count
+        if collectionView == storyCollectionView {
+            return storyContentList.count
+        } else {
+            return 6
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as? StoryCollectionViewCell else {return UICollectionViewCell()}
+        if collectionView == storyCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as? StoryCollectionViewCell else {return UICollectionViewCell()}
+            
+            cell.setData(storyName: storyContentList[indexPath.row].storyName, storyImage: storyContentList[indexPath.row].makeImage())
         
-        cell.setData(storyName: storyContentList[indexPath.row].storyName, storyImage: storyContentList[indexPath.row].makeImage())
-    
-        return cell
+            return cell
+        } else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as? StoryCollectionViewCell else {return UICollectionViewCell()}
+            
+            return cell
+        }
+        
     }
     
 }
