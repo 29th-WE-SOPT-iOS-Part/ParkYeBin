@@ -32,7 +32,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     func setUI() {
         self.pwCheckBox.titleLabel!.text = ""
         
-        self.nextBtn.backgroundColor = UIColor.systemBlue
+        self.nextBtn.backgroundColor = UIColor.buttonBlue
         self.nextBtn.layer.cornerRadius = 4
         self.nextBtn.backgroundColor = UIColor.lightGray
         
