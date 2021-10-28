@@ -397,14 +397,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="104" id="iGC-O5-sWX"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ga3-Yl-Kol">
-                                    <size key="itemSize" width="109" height="102"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bZk-iR-e7d">
+                                    <size key="itemSize" width="72" height="104"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="StoryCollectionViewCell" id="8hy-Sw-1KL" customClass="StoryCollectionViewCell" customModule="_9th_assignmnet_YouTube" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCollectionViewCell" id="8hy-Sw-1KL" customClass="StoryCollectionViewCell" customModule="_9th_assignmnet_YouTube" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="104"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JIv-th-R9H">
@@ -421,6 +421,7 @@
                                                     <rect key="frame" x="0.0" y="13.5" width="72" height="58"/>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="yiP-KS-EB8" firstAttribute="top" secondItem="561-dC-AoR" secondAttribute="bottom" constant="4" id="GyM-q1-cCm"/>
                                                 <constraint firstItem="561-dC-AoR" firstAttribute="leading" secondItem="JIv-th-R9H" secondAttribute="leading" id="HZV-Rq-A5i"/>
@@ -432,7 +433,6 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="72" height="104"/>
                                         <connections>
-                                            <outlet property="storyImage" destination="561-dC-AoR" id="dYm-6Z-79h"/>
                                             <outlet property="storyImageView" destination="561-dC-AoR" id="HaV-sc-BR7"/>
                                             <outlet property="storyNameLabel" destination="yiP-KS-EB8" id="lZb-eI-mbZ"/>
                                         </connections>
