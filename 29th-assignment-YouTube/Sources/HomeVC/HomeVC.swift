@@ -10,21 +10,25 @@ import UIKit
 class HomeVC: UIViewController {
 
     @IBOutlet weak var storyCollectionView: UICollectionView!
+    @IBOutlet weak var mainTableView: UITableView!
     
     var storyContentList: [StoryDataModel] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initContentList()
+        registerXib()
         storyCollectionView.dataSource = self
+        mainTableView.delegate = self
+        mainTableView.dataSource = self
 
     }
     
     func registerXib(){
-        let xibName = UINib(nibName: StoryCollectionViewCell.identifier, bundle: nil)
-        print(StoryCollectionViewCell.identifier)
-        storyCollectionView.register(xibName, forCellWithReuseIdentifier: StoryCollectionViewCell.identifier)
+        let xibName = UINib(nibName: HomeTableViewCell.identifier, bundle: nil)
+        mainTableView.register(xibName, forCellReuseIdentifier: HomeTableViewCell.identifier)
     }
     
     func initContentList() {
@@ -39,6 +43,27 @@ class HomeVC: UIViewController {
     }
 }
 
+// MARK: TableView
+extension HomeVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 306
+    }
+    
+}
+
+extension HomeVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier) as? HomeTableViewCell else {return UITableViewCell()}
+        
+        return cell
+    }
+}
+
+// MARK: CollectionView
 extension HomeVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return storyContentList.count

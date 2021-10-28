@@ -461,6 +461,7 @@
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="mainTableView" destination="OI0-H5-acD" id="GS4-6X-cLo"/>
                         <outlet property="storyCollectionView" destination="A3c-s5-Csa" id="uCe-4a-Rq5"/>
                     </connections>
                 </viewController>

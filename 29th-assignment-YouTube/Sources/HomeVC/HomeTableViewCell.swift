@@ -8,10 +8,20 @@
 import UIKit
 
 class HomeTableViewCell: UITableViewCell {
+    static let identifier = "HomeTableViewCell"
 
+  
+    @IBOutlet weak var mainImageView: UIImageView!
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        logoImageView.image = UIImage(named: "soptLogoCircle")
+        mainImageView.image = UIImage(named: "soptIOS")
+        titleLabel.text = "1차 세미나 : iOS 컴포넌트 이해, XCode 기본 사용법, View 화면 전환"
+        subtitleLabel.text = "WE SOPT ・조회수 100만회 ・ 3주 전"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
