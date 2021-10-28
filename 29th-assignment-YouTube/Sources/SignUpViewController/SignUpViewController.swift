@@ -40,12 +40,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setTextFieldUI() {
-        for i in textFieldCollection {
-            i.delegate = self
-            i.layer.borderWidth = 1
-            i.layer.borderColor = UIColor.lightGray.cgColor
-            i.layer.cornerRadius = 8
-            i.addLeftPadding()
+        for textField in textFieldCollection {
+            textField.delegate = self
+            textField.layer.borderWidth = 1
+            textField.layer.borderColor = UIColor.lightGray.cgColor
+            textField.layer.cornerRadius = 8
+            textField.addLeftPadding()
         }
     }
     
