@@ -11,6 +11,7 @@
 		15B2AE85272AFA2900FFC5B2 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2AE84272AFA2900FFC5B2 /* UITextField.swift */; };
 		15B2AE87272AFDD800FFC5B2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2AE86272AFDD800FFC5B2 /* UIColor.swift */; };
 		15B2AE89272B139300FFC5B2 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2AE88272B139300FFC5B2 /* StoryCollectionViewCell.swift */; };
+		15B2AE8B272B17BB00FFC5B2 /* StoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2AE8A272B17BA00FFC5B2 /* StoryDataModel.swift */; };
 		15B70F86270B0B9F00767D1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B70F85270B0B9F00767D1C /* AppDelegate.swift */; };
 		15B70F88270B0B9F00767D1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B70F87270B0B9F00767D1C /* SceneDelegate.swift */; };
 		15B70F8D270B0B9F00767D1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B70F8B270B0B9F00767D1C /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		15B2AE84272AFA2900FFC5B2 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		15B2AE86272AFDD800FFC5B2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		15B2AE88272B139300FFC5B2 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		15B2AE8A272B17BA00FFC5B2 /* StoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDataModel.swift; sourceTree = "<group>"; };
 		15B70F82270B0B9F00767D1C /* 29th-assignmnet-YouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "29th-assignmnet-YouTube.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B70F85270B0B9F00767D1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15B70F87270B0B9F00767D1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			children = (
 				15F3BA34271DCD7D00D51D4E /* HomeVC.swift */,
 				15B2AE88272B139300FFC5B2 /* StoryCollectionViewCell.swift */,
+				15B2AE8A272B17BA00FFC5B2 /* StoryDataModel.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				15F3BA32271DCBBB00D51D4E /* CustomTabbarVC.swift in Sources */,
 				15BAB898270C429F00795C7F /* CompleteViewController.swift in Sources */,
 				15B2AE89272B139300FFC5B2 /* StoryCollectionViewCell.swift in Sources */,
+				15B2AE8B272B17BB00FFC5B2 /* StoryDataModel.swift in Sources */,
 				15F3BA35271DCD7D00D51D4E /* HomeVC.swift in Sources */,
 				15B2AE83272AF8ED00FFC5B2 /* UINavigationController.swift in Sources */,
 				15F3BA37271DCDD500D51D4E /* ShortsVC.swift in Sources */,

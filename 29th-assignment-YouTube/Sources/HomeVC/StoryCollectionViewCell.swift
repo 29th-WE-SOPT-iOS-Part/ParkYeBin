@@ -8,6 +8,7 @@
 import UIKit
 
 class StoryCollectionViewCell: UICollectionViewCell {
+    static let identifier = "StoryCollectionViewCell"
     
     @IBOutlet weak var storyImageView: UIImageView!
     @IBOutlet weak var storyNameLabel: UILabel!
