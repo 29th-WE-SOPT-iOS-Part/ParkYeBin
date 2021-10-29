@@ -22,8 +22,8 @@ class HomeVC: UIViewController {
         registerXib()
         storyCollectionView.dataSource = self
         filterCollectionView.dataSource = self
-//        storyCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "StoryCollectionViewCell")
-        //filterCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "FilterCollectionViewCell")
+        storyCollectionView.delegate = self
+        filterCollectionView.delegate = self
         mainTableView.delegate = self
         mainTableView.dataSource = self
         
@@ -50,21 +50,15 @@ class HomeVC: UIViewController {
 // MARK: TableView
 extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if tableView == mainTableView {
-            return 306
-        } else {
-            return 48
-        }
+        return 306
+
     }
 }
 
 extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == mainTableView {
-            return 10
-        } else {
-            return 6
-        }
+        
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,25 +91,36 @@ extension HomeVC: UICollectionViewDataSource {
             
             return cell
         }
-        
     }
     
 }
 
 extension HomeVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == storyCollectionView {
             return CGSize(width: 72, height: 104)
+        } else {
+            print("???????")
+            print(UIImage(named: "filter-" + String(indexPath.row + 1))?.size.width)
+            return CGSize(width:((UIImage(named: "filter-" + String(indexPath.row + 1)))?.size.width)!, height: 32)
         }
+          
+    }
         
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-            return UIEdgeInsets.zero
-        }
-        
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-            return 0
-        }
-        
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-            return 0
-        }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+
 }
+
+
+
+
