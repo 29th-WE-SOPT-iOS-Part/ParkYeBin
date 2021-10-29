@@ -100,7 +100,6 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
         if collectionView == storyCollectionView {
             return CGSize(width: 72, height: 104)
         } else {
-            print("???????")
             print(UIImage(named: "filter-" + String(indexPath.row + 1))?.size.width)
             return CGSize(width:((UIImage(named: "filter-" + String(indexPath.row + 1)))?.size.width)!, height: 32)
         }
