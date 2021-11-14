@@ -23,17 +23,13 @@ class CompleteViewController: UIViewController {
     }
     
     func setUI() {
-        if isFromSignUp == nil {
-            self.welcomeLabel.text = UserDefaults.standard.string(forKey: "UserName")! + "님 환영합니다!"
-        } else {
-            self.welcomeLabel.text = name! + "님 환영합니다!"
-        }
-       
+        self.welcomeLabel.text = self.name! + "님 환영합니다!"
         
-        self.nextBtn.backgroundColor = UIColor.systemBlue
+        self.nextBtn.backgroundColor = UIColor.buttonBlue
         self.nextBtn.layer.cornerRadius = 4
-        self.nextBtn.backgroundColor = UIColor.systemBlue
+        self.nextBtn.backgroundColor = UIColor.buttonBlue
         
+        self.loginBtn.titleColor(for: .normal) = UIColor.buttonBlue
     }
     
     @IBAction func touchUpToGoNext(_ sender: Any) {

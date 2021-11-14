@@ -23,6 +23,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         setUI()
+        
+        for i in textFieldCollection {
+            i.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        }
     }
     
     func setUI() {
@@ -43,49 +47,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             textField.layer.cornerRadius = 8
             textField.addLeftPadding()
         }
-        
-        for i in textFieldCollection {
-            i.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
-        }
-    }
-    
-    func requestSignUp() {
-        UserSignService.shared.signUp(name: nameTextField.text ?? "",
-                                              email: idTextField.text ?? "",
-                                              password: pwTextField.text ?? "") { responseData in
-            switch responseData {
-            case .success(let loginResponse):
-                guard let response = loginResponse as? LoginResponseData else { return }
-                if let userData = response.data {
-                    let alert = UIAlertController(title: "회원가입",
-                                                  message: response.message,
-                                                  preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "확인", style: .default) { _ in
-                        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") as? CompleteViewController else { return }
-                        
-                        nextVC.isFromSignUp = true
-                        nextVC.rootView = self
-                        nextVC.modalPresentationStyle = .fullScreen
-                        self.present(nextVC, animated: false)
-                    }
-                    alert.addAction(okAction)
-                    
-                    self.present(alert, animated: true)
-                }
-            case .requestERR(let msg):
-                print("requestErr")
-            case .pathErr:
-                print("pathErr")
-            case .Err400(let loginResponse):
-                guard let response = loginResponse as? LoginResponseData else { return }
-                self.simpleAlert(title: "회원가입", message: response.message)
-
-            case .serverErr:
-                print("serverErr")
-            case .networkFail:
-                print("networkFail")
-            }
-        }
     }
     
     @IBAction func touchUpCheckBox(_ sender: Any) {
@@ -101,7 +62,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func touchUpToGoComplete(_ sender: Any) {
-        requestSignUp()
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") as? CompleteViewController else { return }
+        
+        nextVC.name = self.nameTextField.text
+        nextVC.isFromSignUp = true
+        nextVC.rootView = self
+        nextVC.modalPresentationStyle = .fullScreen
+        
+        self.present(nextVC, animated: false, completion: nil)
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
