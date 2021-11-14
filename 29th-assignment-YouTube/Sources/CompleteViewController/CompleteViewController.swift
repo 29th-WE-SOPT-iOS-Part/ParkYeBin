@@ -23,7 +23,9 @@ class CompleteViewController: UIViewController {
     }
     
     func setUI() {
-        self.welcomeLabel.text = self.name! + "님 환영합니다!"
+        if isFromSignUp == nil {
+        }
+        self.welcomeLabel.text = "gg" + "님 환영합니다!"
         
         self.nextBtn.backgroundColor = UIColor.systemBlue
         self.nextBtn.layer.cornerRadius = 4

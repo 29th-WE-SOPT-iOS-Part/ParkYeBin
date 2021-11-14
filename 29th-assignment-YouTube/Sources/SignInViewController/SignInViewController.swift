@@ -58,19 +58,36 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             case .success(let loginResponse):
                 guard let response = loginResponse as? LoginResponseData else { return }
                 if let userData = response.data {
-                    self.simpleAlert(title: "로그인",
-                                     message: response.message)
+                    let alert = UIAlertController(title: "로그인",
+                                                  message: response.message,
+                                                  preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default) { _ in
+                        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") else { return }
+                        
+                        nextVC.modalPresentationStyle = .fullScreen
+                        self.present(nextVC, animated: false)
+                    }
+                    alert.addAction(okAction)
+                    
+                    self.present(alert, animated: true)
                 }
             case .requestERR(let msg):
-                print("requestERR \(msg)")
+                print("requestErr")
             case .pathErr:
                 print("pathErr")
+            case .Err400(let loginResponse):
+                guard let response = loginResponse as? LoginResponseData else { return }
+                self.simpleAlert(title: "로그인", message: response.message)
+
             case .serverErr:
                 print("serverErr")
             case .networkFail:
                 print("networkFail")
             }
         }
+        
+        
+
     }
     
     
@@ -84,11 +101,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func touchUpToGoComplete(_ sender: Any) {
-        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") as? CompleteViewController else { return }
-        
-        nextVC.name = self.nameTextField.text
-        nextVC.modalPresentationStyle = .fullScreen
-        self.present(nextVC, animated: false, completion: nil)
+        requestLogin()
+       
     }
     
     // MARK: - @objc Function

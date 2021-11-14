@@ -33,7 +33,7 @@ struct UserSignService {
                 guard let value = dataResponse.value else { return }
                 let networkResult = self.judgeLoginStatus(by: statusCode, value)
                 completion(networkResult)
-            case .failure(let err):
+            case .failure(let err): // 서버 통신이 실패한 경우
                 print(err)
                 completion(.networkFail)
             }
@@ -44,7 +44,11 @@ struct UserSignService {
     private func judgeLoginStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {
         case 200: return isValidLoginData(data: data)
-        case 400: return .pathErr
+        case 400:
+            let decoder = JSONDecoder()
+            guard let decodedData = try? decoder.decode(LoginResponseData.self, from: data)
+                else { return .pathErr }
+            return .Err400(decodedData)
         case 500: return .serverErr
         default: return .networkFail
         }
