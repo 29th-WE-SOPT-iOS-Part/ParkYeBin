@@ -26,9 +26,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
         setUI()
 
-        for i in textFieldCollection {
-            i.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
-        }
+       
     }
     
     // MARK: - Custom Method
@@ -38,7 +36,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         self.nextBtn.backgroundColor = UIColor.buttonBlue
         self.nextBtn.layer.cornerRadius = 4
         self.nextBtn.backgroundColor = UIColor.lightGray
-        
         
         setTextFieldUI()
     }
@@ -50,8 +47,33 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             textField.layer.borderColor = UIColor.lightGray.cgColor
             textField.layer.cornerRadius = 8
             textField.addLeftPadding()
+            textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         }
     }
+    
+    func requestLogin() {
+        UserSignService.shared.login(email: idTextField.text ?? "",
+                                     password: pwTextField.text ?? "") { responseData in
+            switch responseData {
+            case .success(let loginResponse):
+                guard let response = loginResponse as? LoginResponseData else { return }
+                if let userData = response.data {
+                    self.simpleAlert(title: "로그인",
+                                     message: response.message)
+                }
+            case .requestERR(let msg):
+                print("requestERR \(msg)")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
+    
     
     // MARK: - @IBAction Properties
     
@@ -62,7 +84,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func touchUpToGoComplete(_ sender: Any) {
-       
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") as? CompleteViewController else { return }
         
         nextVC.name = self.nameTextField.text
