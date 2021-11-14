@@ -64,6 +64,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                     let okAction = UIAlertAction(title: "확인", style: .default) { _ in
                         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "CompleteViewController") else { return }
                         
+                        UserDefaults.standard.set(userData.name, forKey: "UserName")
                         nextVC.modalPresentationStyle = .fullScreen
                         self.present(nextVC, animated: false)
                     }
