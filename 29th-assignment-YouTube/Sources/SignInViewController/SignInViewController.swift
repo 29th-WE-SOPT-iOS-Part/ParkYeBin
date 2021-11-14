@@ -8,12 +8,18 @@
 import UIKit
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
+    
+    // MARK: - @IBOutlet Properties
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet var textFieldCollection: [UITextField]!
+    
+    
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +30,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             i.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         }
     }
+    
+    // MARK: - Custom Method
     
     func setUI() {
         self.nextBtn.isEnabled = false
@@ -45,6 +53,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    // MARK: - @IBAction Properties
+    
     @IBAction func touchUpToGoSignUp(_ sender: Any) {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") else { return }
         
@@ -59,7 +69,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: false, completion: nil)
     }
-   
+    
+    // MARK: - @objc Function
+    
     @objc func textFieldDidChange(_ textField: UITextField) {
         self.nextBtn.isEnabled =
         self.nameTextField.hasText && self.idTextField.hasText && self.pwTextField.hasText
