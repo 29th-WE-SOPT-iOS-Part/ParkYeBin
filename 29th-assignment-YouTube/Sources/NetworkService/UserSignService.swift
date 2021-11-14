@@ -61,4 +61,34 @@ struct UserSignService {
             else { return .pathErr }
         return .success(decodedData)
     }
+    
+    func signUp(name: String, email: String, password: String, completion: @escaping (NetworkResult<Any>) -> (Void)) {
+        
+        let url = APIConstants.signUpURL
+        
+        let header: HTTPHeaders = [
+            "Content-Type" : "application/json"
+        ]
+        
+        let body: Parameters = [
+            "name": name,
+            "email": email,
+            "password": password
+        ]
+        
+        let dataRequest = AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
+        
+        dataRequest.responseData { dataResponse in
+            switch dataResponse.result {
+            case .success:
+                guard let statusCode = dataResponse.response?.statusCode else { return }
+                guard let value = dataResponse.value else { return }
+                let networkResult = self.judgeLoginStatus(by: statusCode, value)
+                completion(networkResult)
+            case .failure(let err): // 서버 통신이 실패한 경우
+                print(err)
+                completion(.networkFail)
+            }
+        }
+    }
 }
