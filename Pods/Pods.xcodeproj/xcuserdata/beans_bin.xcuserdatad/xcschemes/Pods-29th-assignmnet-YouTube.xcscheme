@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "07AE600630786FAE770EB8AE805270E3"
-               BuildableName = "Pods-29th-assignmnet-YouTube.framework"
+               BuildableName = "Pods_29th_assignmnet_YouTube.framework"
                BlueprintName = "Pods-29th-assignmnet-YouTube"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
