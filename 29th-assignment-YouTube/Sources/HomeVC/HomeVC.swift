@@ -30,6 +30,13 @@ class HomeVC: UIViewController {
 
     }
     
+    @IBAction func touchUpToGoLogin(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginNavigationController") else { return }
+        nextVC.modalPresentationStyle = .fullScreen
+        self.present(nextVC, animated: false)
+        
+    }
+    
     func registerXib(){
         let xibName = UINib(nibName: HomeTableViewCell.identifier, bundle: nil)
         mainTableView.register(xibName, forCellReuseIdentifier: HomeTableViewCell.identifier)
