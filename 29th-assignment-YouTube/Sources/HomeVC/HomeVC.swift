@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var storyCollectionView: UICollectionView!
     @IBOutlet weak var filterCollectionView: UICollectionView!
@@ -74,8 +74,11 @@ extension HomeVC: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier) as? HomeTableViewCell else {return UITableViewCell()}
         
         let tapRecorgnizer = UITapGestureRecognizer(target: self, action: #selector(tapView(gestureRecognizer:)))
-        
+       
         cell.mainImageView.addGestureRecognizer(tapRecorgnizer)
+        
+        tapRecorgnizer.delegate = self
+        
         
         return cell
     }
