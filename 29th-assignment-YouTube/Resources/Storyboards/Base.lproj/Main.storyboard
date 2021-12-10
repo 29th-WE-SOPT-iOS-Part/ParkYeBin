@@ -381,35 +381,44 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14f-ey-ZZ1">
+                                <rect key="frame" x="0.0" y="44" width="61" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="BACK"/>
+                                <connections>
+                                    <action selector="touchUpToBack:" destination="MYa-fh-6L1" eventType="touchUpInside" id="yjX-hk-QdI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1n4-oP-a9W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RvL-O4-VHM" firstAttribute="leading" secondItem="1n4-oP-a9W" secondAttribute="leading" constant="12" id="2IO-st-95m"/>
+                            <constraint firstItem="14f-ey-ZZ1" firstAttribute="top" secondItem="1n4-oP-a9W" secondAttribute="top" id="BIn-Jz-CIA"/>
                             <constraint firstItem="DE2-Ji-dvJ" firstAttribute="leading" secondItem="bFy-RU-Bpj" secondAttribute="trailing" constant="8" symbolic="YES" id="IYA-83-6GR"/>
                             <constraint firstItem="DE2-Ji-dvJ" firstAttribute="top" secondItem="8Jo-yG-gVz" secondAttribute="bottom" constant="7" id="Jhf-nj-KCN"/>
                             <constraint firstItem="8Jo-yG-gVz" firstAttribute="leading" secondItem="1n4-oP-a9W" secondAttribute="leading" id="Nim-ab-3zv"/>
+                            <constraint firstItem="14f-ey-ZZ1" firstAttribute="leading" secondItem="1n4-oP-a9W" secondAttribute="leading" id="Sd7-li-KiL"/>
                             <constraint firstItem="bFy-RU-Bpj" firstAttribute="leading" secondItem="RvL-O4-VHM" secondAttribute="trailing" constant="12" id="UjH-Am-mhe"/>
                             <constraint firstItem="i0S-QH-Jgf" firstAttribute="top" secondItem="bFy-RU-Bpj" secondAttribute="bottom" constant="4" id="WKs-sp-rmp"/>
                             <constraint firstItem="8Jo-yG-gVz" firstAttribute="trailing" secondItem="1n4-oP-a9W" secondAttribute="trailing" id="Z0d-MQ-Igy"/>
                             <constraint firstItem="8Jo-yG-gVz" firstAttribute="top" secondItem="1n4-oP-a9W" secondAttribute="top" id="elF-5h-qbb"/>
                             <constraint firstItem="i0S-QH-Jgf" firstAttribute="leading" secondItem="RvL-O4-VHM" secondAttribute="trailing" constant="11" id="gRR-Xb-7Ky"/>
                             <constraint firstItem="RvL-O4-VHM" firstAttribute="top" secondItem="8Jo-yG-gVz" secondAttribute="bottom" constant="11" id="gqe-2i-cM3"/>
+                            <constraint firstItem="1n4-oP-a9W" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="i0S-QH-Jgf" secondAttribute="trailing" symbolic="YES" id="iNh-ZG-Fl0"/>
                             <constraint firstItem="bFy-RU-Bpj" firstAttribute="top" secondItem="8Jo-yG-gVz" secondAttribute="bottom" constant="11" id="nLf-gq-tFD"/>
                             <constraint firstItem="1n4-oP-a9W" firstAttribute="trailing" secondItem="DE2-Ji-dvJ" secondAttribute="trailing" id="zQk-5G-yig"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imgView" destination="8Jo-yG-gVz" id="hiK-op-1hm"/>
-                        <outlet property="subTitle" destination="i0S-QH-Jgf" id="Qge-wO-fQV"/>
                         <outlet property="subtitleLabel" destination="i0S-QH-Jgf" id="M5O-4a-5Xj"/>
-                        <outlet property="title" destination="bFy-RU-Bpj" id="IiW-zV-7Lm"/>
                         <outlet property="titleLabel" destination="bFy-RU-Bpj" id="DWq-de-q2x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uqu-Il-Pli" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4027" y="-564"/>
+            <point key="canvasLocation" x="4026.0869565217395" y="-564.50892857142856"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="p50-DF-CQ9">

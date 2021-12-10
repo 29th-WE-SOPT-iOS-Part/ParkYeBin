@@ -72,13 +72,25 @@ extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier) as? HomeTableViewCell else {return UITableViewCell()}
         
-        let tapRecorgnizer = UITapGestureRecognizer(target: self, action: #selector(cell.tapView(gestureRecognizer:)))
+        let tapRecorgnizer = UITapGestureRecognizer(target: self, action: #selector(tapView(gestureRecognizer:)))
         cell.mainImageView.addGestureRecognizer(tapRecorgnizer)
         tapRecorgnizer.delegate = self
         
         return cell
     }
     
+    @objc func tapView(gestureRecognizer: UIGestureRecognizer) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: HomeTapVC.identifier) as? HomeTapVC else { return }
+        
+        nextVC.modalPresentationStyle = .fullScreen
+        
+        present(nextVC, animated: true) {
+            nextVC.imgView.image = UIImage(named: "soptIOS")
+            nextVC.titleLabel.text = "1차 세미나 : iOS 컴포넌트 이해, XCode 기본 사용법, View 화면 전환"
+            nextVC.subtitleLabel.text = "WE SOPT ・조회수 100만회 ・ 3주 전"
+            
+        }
+    }
    
 }
 
