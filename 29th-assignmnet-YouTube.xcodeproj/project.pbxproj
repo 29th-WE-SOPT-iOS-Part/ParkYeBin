@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1501BB9D276382430084AAE4 /* HomeTapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1501BB9C276382430084AAE4 /* HomeTapVC.swift */; };
 		15B2AE83272AF8ED00FFC5B2 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2AE82272AF8ED00FFC5B2 /* UINavigationController.swift */; };
 		15B2AE85272AFA2900FFC5B2 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2AE84272AFA2900FFC5B2 /* UITextField.swift */; };
 		15B2AE87272AFDD800FFC5B2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2AE86272AFDD800FFC5B2 /* UIColor.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1501BB9C276382430084AAE4 /* HomeTapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTapVC.swift; sourceTree = "<group>"; };
 		15B2AE82272AF8ED00FFC5B2 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		15B2AE84272AFA2900FFC5B2 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		15B2AE86272AFDD800FFC5B2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				15B2AE92272B24D700FFC5B2 /* HomeTableViewCell.swift */,
 				15B2AE93272B24D700FFC5B2 /* HomeTableViewCell.xib */,
 				15FF7ED8272B35E7004BE9D1 /* FilterCollectionViewCell.swift */,
+				1501BB9C276382430084AAE4 /* HomeTapVC.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				15B2AE89272B139300FFC5B2 /* StoryCollectionViewCell.swift in Sources */,
 				15B2AE8B272B17BB00FFC5B2 /* StoryDataModel.swift in Sources */,
 				15F3BA35271DCD7D00D51D4E /* HomeVC.swift in Sources */,
+				1501BB9D276382430084AAE4 /* HomeTapVC.swift in Sources */,
 				15B2AE83272AF8ED00FFC5B2 /* UINavigationController.swift in Sources */,
 				15F3BA37271DCDD500D51D4E /* ShortsVC.swift in Sources */,
 				15B2AE94272B24D700FFC5B2 /* HomeTableViewCell.swift in Sources */,

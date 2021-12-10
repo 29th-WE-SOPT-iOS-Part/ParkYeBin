@@ -60,7 +60,6 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate {
 extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 306
-
     }
 }
 
@@ -73,19 +72,14 @@ extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier) as? HomeTableViewCell else {return UITableViewCell()}
         
-        let tapRecorgnizer = UITapGestureRecognizer(target: self, action: #selector(tapView(gestureRecognizer:)))
-       
+        let tapRecorgnizer = UITapGestureRecognizer(target: self, action: #selector(cell.tapView(gestureRecognizer:)))
         cell.mainImageView.addGestureRecognizer(tapRecorgnizer)
-        
         tapRecorgnizer.delegate = self
-        
         
         return cell
     }
     
-    @objc func tapView(gestureRecognizer: UIGestureRecognizer) {
-        print("~$$")
-    }
+   
 }
 
 // MARK: CollectionView
@@ -96,7 +90,6 @@ extension HomeVC: UICollectionViewDataSource {
         } else {
             return 6
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -339,6 +339,21 @@
             </objects>
             <point key="canvasLocation" x="3281" y="102"/>
         </scene>
+        <!--Home TapVC-->
+        <scene sceneID="DtH-ND-fri">
+            <objects>
+                <viewController id="MYa-fh-6L1" customClass="HomeTapVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="HomeTapVC" id="l58-0I-iFL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1n4-oP-a9W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uqu-Il-Pli" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4027" y="-564"/>
+        </scene>
         <!--HomeVC-->
         <scene sceneID="p50-DF-CQ9">
             <objects>
