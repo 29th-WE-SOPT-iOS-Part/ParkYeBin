@@ -20,14 +20,7 @@ class HomeVC: UIViewController {
         
         initContentList()
         registerXib()
-        storyCollectionView.dataSource = self
-        filterCollectionView.dataSource = self
-        storyCollectionView.delegate = self
-        filterCollectionView.delegate = self
-        mainTableView.delegate = self
-        mainTableView.dataSource = self
-        
-
+        setDataSourceWithDelegate()
     }
     
     @IBAction func touchUpToGoLogin(_ sender: Any) {
@@ -35,6 +28,15 @@ class HomeVC: UIViewController {
         nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: false)
         
+    }
+    
+    func setDataSourceWithDelegate() {
+        storyCollectionView.dataSource = self
+        filterCollectionView.dataSource = self
+        storyCollectionView.delegate = self
+        filterCollectionView.delegate = self
+        mainTableView.delegate = self
+        mainTableView.dataSource = self
     }
     
     func registerXib(){
@@ -71,7 +73,15 @@ extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier) as? HomeTableViewCell else {return UITableViewCell()}
         
+        let tapRecorgnizer = UITapGestureRecognizer(target: self, action: #selector(tapView(gestureRecognizer:)))
+        
+        cell.mainImageView.addGestureRecognizer(tapRecorgnizer)
+        
         return cell
+    }
+    
+    @objc func tapView(gestureRecognizer: UIGestureRecognizer) {
+        print("~$$")
     }
 }
 
@@ -107,7 +117,7 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
         if collectionView == storyCollectionView {
             return CGSize(width: 72, height: 104)
         } else {
-            print(UIImage(named: "filter-" + String(indexPath.row + 1))?.size.width)
+//            print(UIImage(named: "filter-" + String(indexPath.row + 1))?.size.width)
             return CGSize(width:((UIImage(named: "filter-" + String(indexPath.row + 1)))?.size.width)!, height: 32)
         }
           
