@@ -31,7 +31,12 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     @objc func tapView(gestureRecognizer: UIGestureRecognizer) {
-        
+//        guard let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: HomeTapVC.identifier) as? HomeTapVC else { return }
+//
+//        nextVC.imgView = self.mainImageView
+//        nextVC.titleLabel = self.titleLabel
+//        nextVC.subtitleLabel = self.subtitleLabel
+        print("##")
     }
     
 }

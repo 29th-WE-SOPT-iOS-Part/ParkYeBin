@@ -342,7 +342,7 @@
         <!--Home TapVC-->
         <scene sceneID="DtH-ND-fri">
             <objects>
-                <viewController id="MYa-fh-6L1" customClass="HomeTapVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeTapVC" id="MYa-fh-6L1" customClass="HomeTapVC" customModule="_9th_assignmnet_YouTube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="HomeTapVC" id="l58-0I-iFL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -399,6 +399,13 @@
                             <constraint firstItem="1n4-oP-a9W" firstAttribute="trailing" secondItem="DE2-Ji-dvJ" secondAttribute="trailing" id="zQk-5G-yig"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgView" destination="8Jo-yG-gVz" id="hiK-op-1hm"/>
+                        <outlet property="subTitle" destination="i0S-QH-Jgf" id="Qge-wO-fQV"/>
+                        <outlet property="subtitleLabel" destination="i0S-QH-Jgf" id="M5O-4a-5Xj"/>
+                        <outlet property="title" destination="bFy-RU-Bpj" id="IiW-zV-7Lm"/>
+                        <outlet property="titleLabel" destination="bFy-RU-Bpj" id="DWq-de-q2x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uqu-Il-Pli" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
