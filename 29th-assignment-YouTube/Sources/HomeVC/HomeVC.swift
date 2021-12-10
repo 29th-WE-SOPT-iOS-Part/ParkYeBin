@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var storyCollectionView: UICollectionView!
     @IBOutlet weak var filterCollectionView: UICollectionView!
@@ -20,14 +20,7 @@ class HomeVC: UIViewController {
         
         initContentList()
         registerXib()
-        storyCollectionView.dataSource = self
-        filterCollectionView.dataSource = self
-        storyCollectionView.delegate = self
-        filterCollectionView.delegate = self
-        mainTableView.delegate = self
-        mainTableView.dataSource = self
-        
-
+        setDataSourceWithDelegate()
     }
     
     @IBAction func touchUpToGoLogin(_ sender: Any) {
@@ -35,6 +28,15 @@ class HomeVC: UIViewController {
         nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: false)
         
+    }
+    
+    func setDataSourceWithDelegate() {
+        storyCollectionView.dataSource = self
+        filterCollectionView.dataSource = self
+        storyCollectionView.delegate = self
+        filterCollectionView.delegate = self
+        mainTableView.delegate = self
+        mainTableView.dataSource = self
     }
     
     func registerXib(){
@@ -58,7 +60,6 @@ class HomeVC: UIViewController {
 extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 306
-
     }
 }
 
@@ -71,8 +72,26 @@ extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier) as? HomeTableViewCell else {return UITableViewCell()}
         
+        let tapRecorgnizer = UITapGestureRecognizer(target: self, action: #selector(tapView(gestureRecognizer:)))
+        cell.mainImageView.addGestureRecognizer(tapRecorgnizer)
+        tapRecorgnizer.delegate = self
+        
         return cell
     }
+    
+    @objc func tapView(gestureRecognizer: UIGestureRecognizer) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: HomeTapVC.identifier) as? HomeTapVC else { return }
+        
+        nextVC.modalPresentationStyle = .fullScreen
+        
+        present(nextVC, animated: true) {
+            nextVC.imgView.image = UIImage(named: "soptIOS")
+            nextVC.titleLabel.text = "1차 세미나 : iOS 컴포넌트 이해, XCode 기본 사용법, View 화면 전환"
+            nextVC.subtitleLabel.text = "WE SOPT ・조회수 100만회 ・ 3주 전"
+            
+        }
+    }
+   
 }
 
 // MARK: CollectionView
@@ -83,7 +102,6 @@ extension HomeVC: UICollectionViewDataSource {
         } else {
             return 6
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -107,7 +125,7 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
         if collectionView == storyCollectionView {
             return CGSize(width: 72, height: 104)
         } else {
-            print(UIImage(named: "filter-" + String(indexPath.row + 1))?.size.width)
+//            print(UIImage(named: "filter-" + String(indexPath.row + 1))?.size.width)
             return CGSize(width:((UIImage(named: "filter-" + String(indexPath.row + 1)))?.size.width)!, height: 32)
         }
           

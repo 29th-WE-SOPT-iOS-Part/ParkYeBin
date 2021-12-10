@@ -25,8 +25,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         setUI()
-
-       
     }
     
     // MARK: - Custom Method
